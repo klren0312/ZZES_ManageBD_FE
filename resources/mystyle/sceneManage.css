@@ -1,0 +1,223 @@
+#sceneManage-main {
+    background-color: #f7f7f7;
+}
+
+#sceneManage-content {
+    padding: 20px;
+    margin-top: -35px;
+}
+
+.scene-div {
+    width: 100%;
+    /*height: 113px;*/
+    height: 44px;
+    margin-top: 20px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.scene-div #header-left {
+    padding: 10px;
+    border-bottom: 1px solid #D7D7D7;
+}
+
+.scene-div #gohome {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #333333;
+    text-align: left;
+    line-height: normal;
+}
+
+.scene-div #on {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #0066FF;
+    text-align: left;
+    line-height: normal;
+}
+
+.scene-div #header-right {
+    position: relative;
+}
+
+.scene-div #header-right button {
+    position: absolute;
+    top: -35px;
+    width: 85px;
+    height: 28px;
+    background: inherit;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.scene-div #header-right button:nth-child(1) {
+    background-color: rgba(68, 182, 174, 1);
+    border-color: rgba(68, 182, 174, 1);
+    color: #ffffff;
+    right: 340px;
+}
+
+.scene-div #header-right button:nth-child(2) {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(201, 201, 201, 1);
+    color: #666666;
+    right: 240px;
+}
+
+.scene-div #header-right button:nth-child(3) {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(201, 201, 201, 1);
+    color: #666666;
+    right: 20px;
+}
+
+.scene-div #header-right button:nth-child(1):hover {
+    background-color: rgba(60, 157, 150, 1);
+}
+
+.scene-div #header-right button:nth-child(2):hover,
+.scene-div #header-right button:nth-child(3):hover {
+    background-color: rgba(68, 182, 174, 1);
+    border-color: rgba(68, 182, 174, 1);
+    color: #ffffff;
+}
+
+.scene-div .table {
+    height: 69px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    text-align: center;
+}
+
+.scene-div .table td {
+    vertical-align: middle;
+}
+
+.sceneManageClosePop header,
+.sceneManageDelPop header {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    background: inherit;
+    background-color: rgba(68, 175, 247, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(68, 175, 247, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+
+.sceneManageClosePop header span,
+.sceneManageDelPop header span {
+    font-weight: 700;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.sceneManageClosePop #p1,
+.sceneManageDelPop #p1 {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #333333;
+}
+
+.sceneManageClosePop #p2,
+.sceneManageDelPop #p2 {
+    font-weight: 400;
+    font-style: normal;
+    color: #666666;
+    line-height: 28px;
+}
+
+.sceneManageClosePop section .sceneManageDelPop section {
+    padding: 10px;
+}
+
+.sceneManageClosePop img,
+.sceneManageDelPop img {
+    position: absolute;
+    left: 70px;
+    top: 55px;
+    width: 30px;
+}
+
+.sceneManageClosePop p,
+.sceneManageDelPop p {
+    margin-left: 105px;
+    margin-top: 14px;
+}
+
+.sceneManageClosePop .ok,
+.sceneManageDelPop .ok {
+    width: 94px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(68, 175, 247, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(68, 175, 247, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.sceneManageClosePop .cancel,
+.sceneManageDelPop .cancel {
+    width: 94px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(148, 167, 177, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(148, 167, 177, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.sceneManageClosePop footer button,
+.sceneManageDelPop footer button {
+    margin-left: 130px;
+    margin-bottom: 10px;
+}

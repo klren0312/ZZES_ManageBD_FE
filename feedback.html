@@ -1,0 +1,91 @@
+﻿<main id="feedback-page" ng-controller="feedbackController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">意见反馈</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>意见反馈</p>
+        <button type="button" class="output-btn" data-toggle="modal" data-target="#feedback">导出</button>
+    </div>
+    <!--搜索行-->
+    <!--<div class="personManage-search-div">
+        <input type="text" ng-model="keywords" placeholder="关键字">
+        <input type="text" name="datefilter" value="" style="width: 170px;text-align: center;" />
+
+        <button id="searchbtn" style="left: 300px;" ng-click="search()">搜索</button>
+        <button id="resetbtn" ng-click="reset()">重置</button>
+    </div>-->
+
+    <!--表格-->
+
+    <table id="feedback-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>序号</th>
+                <th>行业App账号</th>
+                <th>昵称</th>
+                <th>意见主题</th>
+                <th>意见内容</th>
+                <th>提交时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in feedbacklists">
+                <td><input type="checkbox"></td>
+                <td>{{$index+1}}</td>
+                <td>{{x.Mobile}}</td>
+                <td>{{x.LoginName}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.content}}</td>
+                <td>{{x.updateAt|currentDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!--导出弹框-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="feedback">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="pop-title">导出数据</div>
+                <!--<div class="pop-second-title">当前选择数据 <span>10</span> 条</div>-->
+                <div class="pop-radio-line">
+                    <span>导出选择：</span>
+                    <label><input type="radio" name="page" ng-model="selectFun" value="allpage"/>全部页批量</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="currentpage"/>当前页</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="result" />筛选结果</label>
+                </div>
+                <hr/>
+                <!--可选择导出-->
+                <div ng-if="selectFun == 'result'">
+                    <div class="pop-checkbox-block">
+                        <span>选择指标：</span>
+                        <label><input type="checkbox" ng-click="select('uplatAccount',$event)" ng-model="uplatAccount">行业App账号</label>
+                        <label><input type="checkbox" ng-click="select('nickname',$event)" ng-model="nickname">昵称</label>
+                        <label><input type="checkbox" ng-click="select('sex',$event)" ng-model="sex">意见主题</label>
+                        <label><input type="checkbox" ng-click="select('content',$event)" ng-model="content">意见内容</label>
+                        <label><input type="checkbox" ng-click="select('pushTime',$event)" ng-model="pushTime">提交时间</label>
+                    </div>
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(result)">导出</button>
+                    </div>
+                </div>
+                <!--整体导出-->
+                <div ng-if="selectFun == 'allpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(allexport)">导出</button>
+                    </div>
+                </div>
+                <!--当前页导出-->
+                <div ng-if="selectFun == 'currentpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportToExcel('#personManage-table','mysheet')">导出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

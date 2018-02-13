@@ -1,0 +1,27 @@
+.personManage-search-div select:nth-child(6) {
+    width: 115px;
+    height: 28px;
+}
+
+.personManage-search-div select:nth-child(7) {
+    width: 115px;
+    height: 28px;
+}
+
+#personManage-main .select-page {
+    float: right;
+    margin-top: -20px;
+}
+
+#personManage-main .equipmentDetails {
+    width: 54px;
+    height: 25px;
+    background-color: transparent;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}

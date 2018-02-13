@@ -1,0 +1,62 @@
+<main id="roleManage-page" class="verificationCode-page" ng-controller="verificationCodeController">
+  <div class="home-title">
+    <img id="u149_img" class="img " src="images/index/u149.png" />
+    <span class="home-text">系统成员管理 &gt; 验证码生成</span>
+  </div>
+  <div class="home-second-title personManage-second-title">
+      <p>验证码生成</p>
+      <select ng-model="day" class="selectDay">
+        <option value="">--保存天数--</option>
+        <option value="1">1天</option>
+        <option value="2">2天</option>
+        <option value="3">3天</option>
+        <option value="4">4天</option>
+        <option value="5">5天</option>
+        <option value="6">6天</option>
+        <option value="7">7天</option>
+      </select>
+      <button type="button" id="create-role" ng-click="create()">生成验证码</button>
+      <button type="button" id="deleteCode" ng-click="delete(result)">批量删除</button>
+  </div>
+  <!--表格-->
+  <table id="faultRecord-table" class="table table-bordered table-hover">
+      <thead>
+          <tr>
+              <th><input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"></th>
+              <th>序号</th>
+              <th>验证码</th>
+              <th>生成时间</th>
+              <th>过期时间</th>
+              <th>操作</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr ng-repeat="x in items">
+              <td><input type="checkbox" ng-model="selected" ng-checked="selected" name="selected" ng-click="select(x.id,$event)"></td>
+              <td>{{$index+1}}</td>
+              <td>{{x.verification}}</td>
+              <td>{{x.createtime}}</td>
+              <td>{{x.expirationtime}}</td>
+              <td>
+                <button class="watchDetails" ng-click="delete(x.id)">删除</button>
+            </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <!-- <h1>{{result}}</h1> -->
+  <!--分页-->
+  <nav class="select-page">
+      <ul class="pagination">
+          <li>
+              <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+          </li>
+          <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+              <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+          </li>
+          <li>
+              <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+          </li>
+      </ul>
+  </nav>
+</main>

@@ -1,0 +1,26 @@
+#faultRecord-page #left,
+#faultRecord-page #right {
+    width: 140px;
+    height: 30px;
+    border-color: #E5E5E5;
+}
+
+#faultRecord-page #middle {
+    background-color: #E5E5E5;
+}
+
+#faultRecord-page input,
+#faultRecord-page select,
+#faultRecord-page span {
+    margin-left: 10px;
+}
+
+#faultRecord-page .dateinput {
+    width: 140px;
+    height: 28px;
+}
+
+#faultRecord-page #keywordinput {
+    width: 243px;
+    height: 28px;
+}

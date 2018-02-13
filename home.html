@@ -1,0 +1,128 @@
+<main id="home-main" ng-controller="homeController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">首页</span>
+    </div>
+    <!--FIXME: 修改成弹性布局？-->
+    <div class="home-second-title">
+        <p>统计概率</p>
+    </div>
+    <div class="row homechartdiv">
+        <!--左侧图表-->
+        <div class="col-sm-6">
+            <!--设备分析-->
+            <div class="equipment-analysis col-sm-12">
+                <div class="col-sm-12 chartdiv1">
+                    <p class="chartheader">设备分析</p>
+                    <hr/>
+                    <div class="col-sm-8">
+                        <!--设备分析图表-->
+                        <equipment-analysis ng-if="equipdata" id="equipanalysis" equipdata="equipdata"></equipment-analysis>
+                    </div>
+                    <!--右侧数字统计显示-->
+                    <div class="col-sm-4 infodiv">
+                        <div class="col-sm-12">
+                            <div class="col-sm-9">
+                                <p>昨日在线设备 </p>
+                                <h1>{{newEquip[newEquip.length-1]}}</h1>
+                                <p>昨日活跃设备</p>
+                                <h1>{{activeEquip[activeEquip.length-1]}}</h1>
+                                <p>总接入设备</p>
+                                <h1>{{allEquip}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--用户分析-->
+            <div class="user-analysis col-sm-12">
+                <!--用户分析-->
+                <div class="col-sm-12  chartdiv2">
+                    <p class="chartheader">用户分析</p>
+                    <hr/>
+                    <div class="col-sm-8">
+                        <!--用户分析图表-->
+                        <user-analysis ng-if="userdata" id="useranalysis" userdata="userdata"></user-analysis>
+                    </div>
+                    <!--右侧数字显示-->
+                    <div class="col-sm-4 infodiv">
+                        <div class="col-sm-12">
+                            <div class="col-sm-9">
+                                <p>昨日新增用户</p>
+                                <h1>{{newPeo[newPeo.length-1]}}</h1>
+                                <p>昨日活跃用户</p>
+                                <h1>{{activePeo[activePeo.length-1]}}</h1>
+                                <p>总注册用户</p>
+                                <h1>{{allPeo[allPeo.length-1]}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--指令上报与下发-->
+            <div class="information-report col-sm-12">
+                <!--指令上报与下发-->
+                <div class="col-sm-12 chartdiv3">
+                    <p class="chartheader">指令上报与下发分析</p>
+                    <hr/>
+                    <div class="col-sm-8">
+                        <!--指令上报下发图表-->
+                        <info-data ng-if="infodata" id="infodata" infodata="infodata"></info-data>
+                    </div>
+                    <!--右侧数字显示-->
+                    <div class="col-sm-4 infodiv">
+                        <div class="col-sm-12">
+                            <div class="col-sm-9">
+                                <p>昨日上报指令</p>
+                                <h1>{{upperInfo[upperInfo.length-1]}}</h1>
+                                <p>昨日下发指令</p>
+                                <h1>{{lowerInfo[lowerInfo.length-1]}}</h1>
+                                <p>昨日总发送指令</p>
+                                <h1>{{allInfo[allInfo.length-1]}}</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右侧图表-->
+        <div class="col-sm-6">
+            <!--全国设备覆盖情况-->
+            <div class="equipment-coverage col-sm-12" ng-controller="equipment-coverage">
+                <!--全国设备覆盖情况图-->
+                <p class="chartheader">全国设备覆盖情况</p>
+                <hr/>
+                <equipment-coverage id="equcover" data="data"></equipment-coverage>
+                <div class="col-sm-12">
+                    <span class="col-sm-12">设备覆盖区域前3名</span>
+                    <div class="col-sm-4">
+                        <span ng-bind="first" class="col-sm-12"></span>
+                        <span class="city-data" ng-bind="firstData" class="col-sm-12"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span ng-bind="second" class="col-sm-12"></span>
+                        <span class="city-data" ng-bind="secondData" class="col-sm-12"></span>
+                    </div>
+                    <div class="col-sm-4">
+                        <span ng-bind="third" class="col-sm-12"></span>
+                        <span class="city-data" ng-bind="thirdData" class="col-sm-12"></span>
+                    </div>
+                </div>
+
+            </div>
+            <!--接入设备类目占比-->
+            <div class="percentage-equipment col-sm-12" ng-controller="percentage-equipment">
+                <p class="chartheader">接入设备类目占比</p>
+                <hr/>
+                <percentage-equipment id="percentequ" data="data"></percentage-equipment>
+            </div>
+            <!--用户分享占比-->
+            <div class="percentage-usershare col-sm-12" ng-controller="percentage-usershare">
+                <p class="chartheader">用户分享占比</p>
+                <hr/>
+                <percentage-usershare id="persentuser" data="data"></percentage-usershare>
+            </div>
+        </div>
+
+    </div>
+</main>

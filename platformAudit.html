@@ -1,0 +1,14 @@
+<main id="platformaudit-page" ng-controller="platformAuditController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">平台审核</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <!--审核-->
+        <button class="auditbtn auditbtnactive" ng-click="notAuditBtn()">待审核</button>
+        <button class="auditbtn" ng-click="hasAuditBtn()">已审核</button>
+        <button type="button" class="platformbtn" id="createplatbtn" ng-click="createPlatform()" ng-show="showBtn">创建平台</button>
+        <button type="button" class="platformbtn" id="deleteplatbtn" data-toggle="modal" data-target="#del" ng-show="showBtn">删除</button>
+    </div>
+    <ui-view></ui-view>
+</main>

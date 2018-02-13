@@ -1,0 +1,76 @@
+<!--TODO:等待接口-->
+<main class=" sceneinfo-page" id="sceneDetails-page" ng-controller="sceneinfoController">
+    <!--场景-->
+    <div class="sceneinfo-div" style="margin-bottom:20px; " ng-repeat="scene in scenes">
+        <header>
+            <div id="header-left">
+                <span id="gohome">{{scene.name}}</span>
+            </div>
+        </header>
+        <!--表格-->
+        <section id="sceneSetting" ng-repeat="x in scene.ruleGroupDetailList">
+            <!--{{x}}-->
+            <span id="sceneSetting-title">条件规则组设置({{x.desp}})</span>
+
+            <div id="sceneSetting-content">
+                <!--判断表格-->
+                <section id="sceneJudge">
+                    <table cellpadding="20px" class="table table-bordered sceneDetails-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="scene-tb-head">选择设备</th>
+                                <th class="scene-tb-head">设备监控值</th>
+
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="y in x.deviceAndRuleList">
+                            <tr>
+                                <td rowspan="50">判断{{$index+1}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="50">{{y.deviceDefinition.deviceName}}</td>
+                            </tr>
+                            <tr ng-repeat="z in y.triggerRuleList">
+                                <td>
+                                    <div>
+                                        <span>{{z.parameter}} {{z.operator|compareType}} {{z.value}} {{z.desp}}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!--动作表格-->
+                <section id="sceneAction">
+                    <table cellpadding="20px" class="table table-bordered sceneDetails-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="scene-tb-head">选择设备</th>
+                                <th class="scene-tb-head">设备监控值</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-repeat="y in x.deviceAndActionList">
+                            <tr>
+                                <td rowspan="50">动作{{$index+1}}</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="50">{{y.deviceDefinition.deviceName}}</td>
+                            </tr>
+                            <tr ng-repeat="z in y.deviceActionList">
+                                <td>
+                                    <div>
+                                        <span>{{z.parameter}} {{z.operator}} {{z.value}}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </section>
+
+    </div>
+
+</main>

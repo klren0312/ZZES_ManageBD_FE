@@ -1,0 +1,67 @@
+#createRole-page #goback,
+#createRole-page #save {
+    width: 117px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#createRole-page #goback:hover,
+#createRole-page #save:hover {
+    background-color: rgba(35, 133, 199, 1)
+}
+
+#createRole-page #goback {
+    position: absolute;
+    right: 406px;
+    top: 10px;
+}
+
+#createRole-page #save {
+    position: absolute;
+    right: 275px;
+    top: 10px;
+}
+
+#createRole-page .roleinfo {
+    /*margin-bottom: 20px;*/
+    margin-top: 20px;
+}
+
+#createRole-page .roleinput {
+    margin-left: 20%;
+}
+
+#createRole-page .roleinput .flag {
+    color: #ff0000;
+}
+
+#createRole-page .roleinput input {
+    width: 452px;
+    height: 30px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+}
+
+#createRole-page #managelist {
+    margin-left: 25%;
+    margin-top: -25px;
+}

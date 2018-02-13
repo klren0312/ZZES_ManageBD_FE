@@ -1,0 +1,153 @@
+﻿    <!--控制器-->
+  
+    <!--<script src="resources/scripts/controller/indexController.js"></script>-->
+    <!--  <script src="resources/scripts/controller/indexAngularController.js"></script>
+    <script src="resources/scripts/controller/homeController.js"></script>
+    <script src="resources/scripts/controller/personManageController.js"></script>
+    <script src="resources/scripts/controller/userDetailsController.js"></script>
+    <script src="resources/scripts/controller/sceneManageController.js"></script>
+    <script src="resources/scripts/controller/sceneDetailsController.js"></script>
+    <script src="resources/scripts/controller/addSceneController.js"></script>
+    <script src="resources/scripts/controller/equipmentMapController.js"></script>
+    <script src="resources/scripts/controller/faultRecordController.js"></script>
+    <script src="resources/scripts/controller/feedbackController.js"></script>
+    <script src="resources/scripts/controller/msgManageController.js"></script>
+    <script src="resources/scripts/controller/msgDetailsController.js"></script>
+    <script src="resources/scripts/controller/roleManageController.js"></script>
+    <script src="resources/scripts/controller/createRoleController.js"></script>
+    <script src="resources/scripts/controller/roleDetailsController.js"></script>
+    <script src="resources/scripts/controller/memberManageController.js"></script>
+    <script src="resources/scripts/controller/createMemberController.js"></script>
+    <script src="resources/scripts/controller/memberDetailsController.js"></script>
+    <script src="resources/scripts/controller/dataUseSurveyController.js"></script>
+    <script src="resources/scripts/controller/dataEquAnalysisController.js"></script>
+    <script src="resources/scripts/controller/dataUserAnalysisController.js"></script>
+    <script src="resources/scripts/controller/equipmentManageController.js"></script>
+    <script src="resources/scripts/controller/equipmentDetailsController.js"></script> -->
+
+    <!--图表模块-->
+ 
+    <!--<script src="resources/scripts/myecharts/equipment-analysis.js"></script>
+    <script src="resources/scripts/myecharts/user-analysis.js"></script>
+    <script src="resources/scripts/myecharts/equipment-coverage.js"></script>
+    <script src="resources/scripts/myecharts/percentage-equipment.js"></script>
+    <script src="resources/scripts/myecharts/percentage-usershare.js"></script>
+    <script src="resources/scripts/myecharts/bound-devices.js"></script>
+    <script src="resources/scripts/myecharts/bound-equipment.js"></script>
+    <script src="resources/scripts/myecharts/access-equipment.js"></script>
+    <script src="resources/scripts/myecharts/active-equipment.js"></script>
+    <script src="resources/scripts/myecharts/error-equipment.js"></script>
+    <script src="resources/scripts/myecharts/outline-equipment.js"></script>
+    <script src="resources/scripts/myecharts/bind-equipment.js"></script>
+    <script src="resources/scripts/myecharts/new-user.js"></script>
+    <script src="resources/scripts/myecharts/active-user.js"></script>
+    <script src="resources/scripts/myecharts/share-user.js"></script>
+    <script src="resources/scripts/myecharts/time-user.js"></script>
+    <script src="resources/scripts/myecharts/bind-user.js"></script>
+    <script src="resources/scripts/myecharts/start-time.js"></script>
+    <script src="resources/scripts/myecharts/run-times.js"></script>
+    <script src="resources/scripts/myecharts/outline-times.js"></script>
+    <script src="resources/scripts/myecharts/click-fun.js"></script>-->
+
+
+
+<ul>
+                    <li data-jstree='{"opened":true}'>设备管理
+                        <ul>
+                            <li>设备信息查看</li>
+                            <li>导出设备</li>
+                            <li>设备地图</li>
+                            <li>数据分析</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li data-jstree='{"opened":true}'>用户管理
+                        <ul>
+                            <li>用户信息查看</li>
+                            <li>导出信息</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li data-jstree='{"opened":true}'>场景管理
+                        <ul>
+                            <li>新建场景</li>
+                            <li>场景更改</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li data-jstree='{"opened":true}'>用户管理
+                        <ul>
+                            <li>创建用户</li>
+                            <li>删除用户</li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li data-jstree='{"opened":true}'>消息管理
+                        <ul>
+                            <li>推送消息</li>
+                            <li>删除消息</li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+<section id="sceneSetting" ng-repeat="x in sceneGroupList track by $index">
+                <span id="sceneSetting-title">条件规则组{{x}}设置</span>
+                <div id="sceneSetting-content">
+                    <!--判断表格-->
+                    <section id="sceneJudge">
+                        <table cellpadding="20px" id="sceneJudge-table" class="table table-bordered ">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="50">判断</td>
+                                    <td class="scene-tb-head">选择设备</td>
+                                    <td class="scene-tb-head">设备监控值</td>
+                                    <td class="scene-tb-head">操作</td>
+                                </tr>
+                                <tr ng-repeat="x in judges">
+                                    <td>{{x.equipment}}</td>
+                                    <td>{{x.value}}</td>
+                                    <td>
+                                        <button class="sceneEdit" ng-click="judgesEdit()">修改</button>
+                                        <button class="sceneDel" ng-click="judgesDel()">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="addJudge" data-toggle="modal" data-target="#addJudge" ng-click="clear(x)">
+                            <span>+添加</span>
+                        </button>
+                    </section>
+                    <!--动作表格-->
+                    <section id="sceneAction">
+                        <table cellpadding="20px" id="sceneJudge-table" class="table table-bordered ">
+                            <tbody>
+                                <tr>
+                                    <td rowspan="50">动作</td>
+                                    <td class="scene-tb-head">选择设备</td>
+                                    <td class="scene-tb-head">设备动作值</td>
+                                    <td class="scene-tb-head">操作</td>
+                                </tr>
+                                <tr ng-repeat="x in actions">
+                                    <td>{{x.equipment}}</td>
+                                    <td>{{x.value}}</td>
+                                    <td>
+                                        <button class="sceneEdit" ng-click="actionsEdit()">修改</button>
+                                        <button class="sceneDel" ng-click="actionsDel()">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="addJudge" data-toggle="modal" data-target="#addAction" ng-click="clear(x)">
+                            <span>+添加</span>
+                        </button>
+                    </section>
+                    <button class="addSceneBtn" ng-click="deleteSceneGroup(x)">删除规则组</button>
+                </div>
+            </section>

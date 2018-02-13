@@ -1,0 +1,45 @@
+<main class="baseinfo-page" ng-controller="binduserinfoController">
+    <div class="baseinfo-header row">
+        <p class="col-sm-6">绑定设备数：<span>{{userdetails.gizDevBinds | bindnum}} 台</span></p>
+        <!--<p class="col-sm-6">所在场景：<span>回家模式  离家模式</span></p>-->
+    </div>
+    <!--表格-->
+    <table id="personManage-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>UDeviceID</th>
+                <th>接入平台</th>
+                <th>产品名称</th>
+                <th>设备型号</th>
+                <th>连接方式</th>
+                <th>关联时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in allBindDevs">
+                <td>{{$index+1}}</td>
+                <td>{{x.uDevices[0].udeviceId}}</td>
+                <td>{{x.plat_name}}</td>
+                <td>{{x.uDevices[0].DeviceName}}</td>
+                <td>N/A</td>
+                <td>{{x.uDevices[0].NetMode | connectType}}</td>
+                <td>{{x.uDevices[0].createAt | currentDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+</main>

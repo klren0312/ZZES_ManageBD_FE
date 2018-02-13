@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="resources/css/jquery-ui-themes.css" type="text/css" rel="stylesheet" />
+    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet" />
+    <link href="data/styles.css" type="text/css" rel="stylesheet" />
+    <link href="files/login/styles.css" type="text/css" rel="stylesheet" />
+    <!--mystyle-->
+    <link rel="stylesheet" href="resources/mystyle/othercss/login.css" />
+    <!--mystyle end-->
+    <!--import angularjs-->
+    <script src="resources/scripts/angular.min.js"></script>
+    <script src="resources/scripts/angular-route.min.js"></script>
+    <script src="resources/scripts/angular-cookies.min.js"></script>
+    <link rel="stylesheet" href="resources/toastr/angular-toastr.min.css" />
+    <!--<script src="resources/scripts/controller/loginController.js"></script>-->
+</head>
+
+
+<body ng-app="loginApp" ng-controller="loginCtrl" ng-init="pageinit()">
+    <div class="logindiv">
+        <img class="logo " src="images/login/u27.png">
+        <p>
+            <span id="title">治电科技行业服务平台</span>
+        </p>
+        <div>
+            <img class="smallimg" src="images/login/user.png" alt="">
+            <input type="text" placeholder="账号" ng-model="username" ng-value="username" name="username" class="login-input input-admin">
+        </div>
+        <div>
+            <img class="smallimg" src="images/login/pwd.png" alt="">
+            <input type="password" placeholder="密码" ng-model="password" ng-value="password" class="login-input input-pwd">
+        </div>
+
+        <button type="button" ng-click="login()" class="loginbtn">登录</button>
+        <div class="remember">
+            <input name="rememberuser" type="checkbox" ng-model="rememberuser" value="checkbox" />
+            <span>记住密码</span>
+        </div>
+        <div class="forget">
+            <p><span><a href="findPassword.html">忘记密码</a></span></p>
+        </div>
+
+    </div>
+
+    <script src="resources/scripts/angular-animate.min.js"></script>
+    <script src="resources/toastr/angular-toastr.tpls.min.js"></script>
+
+    <!--myscripts-->
+    <script src="resources/scripts/app/loginApp.js"></script>
+    <script src="resources/scripts/controller/loginController/loginAngularController.js"></script>
+</body>
+
+</html>

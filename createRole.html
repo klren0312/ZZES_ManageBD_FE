@@ -1,0 +1,69 @@
+﻿<main id="createRole-page" ng-controller="createRoleController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">系统成员管理 &gt; 角色管理 &gt; 新建角色</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>新建角色</p>
+
+
+        <button type="button" id="goback" ng-click="goback()">返回</button>
+        <button type="button" id="save" ng-click="save()">保存</button>
+    </div>
+    <section id="create-role">
+        <!--错误信息-->
+        <div class="alert alert-warning role-err" role="alert" ng-show="inputError">
+            <p style="color:red;">{{errorinfo}}</p>
+        </div>
+
+        <div>
+            <p class="roleinput"><span class="flag">*</span>角色名称：<input type="text" ng-model="rolename"></p>
+        </div>
+        <div>
+            <p class="roleinput"><span class="flag">*</span>角色描述：<input type="text" ng-model="roledescription"></p>
+        </div>
+        <div>
+            <p class="roleinput"><span class="flag">*</span>权限分配：</p>
+            <!-- 树状图-->
+            <div class="treecheck">
+                <ul>
+                    <li>
+                        <input type="checkbox" ng-model="selectedAll" ng-click="selectAll()" name="selected"> 全选
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(1,$event)" id="1" ng-checked="select1" name="selected"> 首页
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(2,$event)" id="2" ng-checked="select2" name="selected"> 数据分析
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(3,$event)" id="3" ng-checked="select3" name="selected"> 平台审核
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(4,$event)" id="4" ng-checked="select4" name="selected"> 设备管理
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(5,$event)" id="5" ng-checked="select5" name="selected"> 场景管理
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(6,$event)" id="6" ng-checked="select6" name="selected"> 故障记录
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(7,$event)" id="7" ng-checked="select7" name="selected"> 用户管理
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(8,$event)" id="8" ng-checked="select8" name="selected"> 消息管理
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(9,$event)" id="9" ng-checked="select9" name="selected"> 意见反馈
+                    </li>
+                    <li>
+                        <input type="checkbox" ng-click="select(10,$event)" id="10" ng-checked="select10" name="selected"> 系统成员管理
+                    </li>
+                    </li>
+                </ul>
+                <!--{{result}}-->
+            </div>
+        </div>
+    </section>
+</main>

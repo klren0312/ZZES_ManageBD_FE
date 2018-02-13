@@ -1,0 +1,86 @@
+<main ng-controller="notAuditController">
+    <!--表格-->
+    <table id="faultRecord-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"></th>
+                <th>序号</th>
+                <th>平台ID</th>
+                <th>平台类型</th>
+                <th>平台URL</th>
+                <th>平台名称</th>
+                <th>平台描述</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in items">
+                <td><input type="checkbox" ng-model="selected" ng-checked="selected" name="selected" ng-click="select(x.id,$event)"></td>
+                <td>{{$index+1}}</td>
+                <td>{{x.PlatID}}</td>
+                <td>{{x.PlatType|platformType}}</td>
+                <td>{{x.PlatURL}}</td>
+                <td>{{x.PlatName}}</td>
+                <td>{{x.PlatDesc}}</td>
+                <td>
+                    <button class="dosth" ng-click="watchdetails(x.id)">查看</button>
+                    <button class="dosth" data-toggle="modal" data-target="#audit" ng-click="push(x.id)">审核</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--{{result}}-->
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--删除弹框 -->
+    <div class="modal fade sceneManageDelPop" tabindex="-1" role="dialog" id="del">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>删除提示</span>
+                </header>
+                <section>
+                    <img id="u4871_img" class="img " src="images/equipmentDetails/u3613.png">
+                    <p id="p1">确认删除此平台？</p>
+                    <p id="p2">删除后，需要重新创建。</p>
+                </section>
+                <footer>
+                    <button type="button" class="ok" ng-click="delete(result)" data-dismiss="modal">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--审核弹窗-->
+    <div class="modal fade sceneManageClosePop" tabindex="-1" role="dialog" id="audit">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>审核提示</span>
+                </header>
+                <section>
+                    <img id="u4871_img" class="img " src="images/equipmentDetails/u3613.png">
+                    <p id="p1">确认通过次平台审核吗？</p>
+                    <p id="p2">通过后，可在“已审核”列表查看</p>
+                </section>
+                <footer>
+                    <button type="button" class="ok" data-dismiss="modal" ng-click="auditPlat()">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</main>

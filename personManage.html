@@ -1,0 +1,131 @@
+﻿<main id="personManage-main" ng-controller="personManageController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">用户管理 &gt; 用户列表</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>用户列表</p>
+        <button type="button" class="output-btn" data-toggle="modal" data-target=".bs-example-modal-lg">导出</button>
+    </div>
+    <!--搜索行-->
+    <div class="personManage-search-div">
+        <input type="text" ng-model="keywords" placeholder="关键字">
+        <input type="text" ng-model="area" placeholder="选择地区">
+        <select name="" ng-model="sex" id="">
+        <option value="">性别</option>
+        <option value="man">男</option>
+        <option value="woman">女</option>
+      </select>
+        <select name="" ng-model="devicebind" id="">
+        <option value="">绑定设备</option>
+        <option value="yes">是</option>
+        <option value="no">否</option>
+      </select>
+        <select name="" ng-model="liveness" id="">
+        <option value="">活跃度</option>
+        <option value="high">高</option>
+        <option value="medium">中</option>
+        <option value="low">低</option>
+      </select>
+        <button ng-click="search()">搜索</button>
+        <button ng-click="reset()">重置</button>
+    </div>
+    <!--表格-->
+    <table id="personManage-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"></th>
+                <th>序号</th>
+                <th>行业平台ID</th>
+                <th>UserID</th>
+                <th>昵称</th>
+                <th>手机号码</th>
+                <th>性别</th>
+                <th>所在地区</th>
+                <th>绑定设备</th>
+                <th>创建时间</th>
+                <th>更新时间</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in items">
+                <th><input type="checkbox" ng-model="selected" ng-checked="selected" name="selected"></th>
+                <th>{{$index+1}}</th>
+                <th>{{x.uplatId}}</th>
+                <th>{{x.UserID}}</th>
+                <th>{{x.LoginName}}</th>
+                <th>{{x.Mobile|nullToNA}}</th>
+                <th>N/A</th>
+                <th>N/A</th>
+                <th>{{x.gizDevBinds | bindnum}}</th>
+                <th>{{x.createAt | currentDate}}</th>
+                <th>{{x.updateAt | currentDate}}</th>
+                <th><button class="equipmentDetails" ng-click="watchDetails(x.LoginName)">查看</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+    <!--导出弹框-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="pop-title">导出数据</div>
+                <!--<div class="pop-second-title">当前选择数据 <span>10</span> 条</div>-->
+                <div class="pop-radio-line">
+                    <span>导出选择：</span>
+                    <label><input type="radio" name="page" ng-model="selectFun" value="allpage"/>全部页批量</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="currentpage"/>当前页</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="result" />筛选结果</label>
+                </div>
+                <hr/>
+                <!--可选择导出-->
+                <div ng-if="selectFun == 'result'">
+                    <div class="pop-checkbox-block">
+                        <span>选择指标：</span>
+                        <label><input type="checkbox" ng-click="select('uplatId',$event)" ng-model="uplatId">行业App账号</label>
+                        <label><input type="checkbox" ng-click="select('UserID',$event)" ng-model="UserID">UserID</label>
+                        <label><input type="checkbox" ng-click="select('LoginName',$event)" ng-model="LoginName">昵称</label>
+                        <label><input type="checkbox" ng-click="select('sex',$event)" ng-model="sex">性别</label>
+                        <label><input type="checkbox" ng-click="select('place',$event)" ng-model="place">所在地区</label>
+                        <label><input type="checkbox" ng-click="select('deviceAmount',$event)" ng-model="deviceAmount">绑定设备</label>
+                        <label><input type="checkbox" ng-click="select('create_at',$event)" ng-model="create_at">创建时间</label>
+                        <label><input type="checkbox" ng-click="select('update_at',$event)" ng-model="update_at">更新时间</label>
+                    </div>
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(result)">导出</button>
+                    </div>
+                </div>
+                <!--整体导出-->
+                <div ng-if="selectFun == 'allpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(allexport)">导出</button>
+                    </div>
+                </div>
+                <!--当前页导出-->
+                <div ng-if="selectFun == 'currentpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportToExcel('#personManage-table','mysheet')">导出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

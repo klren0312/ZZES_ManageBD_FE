@@ -1,0 +1,200 @@
+.dataUseSurvey .mainContent {
+    padding: 20px 20px;
+}
+
+.dataUseSurvey .topdiv {
+    /*margin-left: 20px;*/
+    padding: 10px;
+    /*width: 100%;*/
+    height: 363px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dataUseSurvey header {
+    border-bottom: 1px solid #E4E4E4;
+    padding: 10px;
+}
+
+.dataUseSurvey header select {
+    float: right;
+}
+
+.dataUseSurvey .headerTitle {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+    font-size: 14px;
+    text-align: left;
+}
+
+.dataUseSurvey .middlediv {
+    /*width: 100%;*/
+    margin-top: 20px;
+    height: 770px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dataUseSurvey .bottomdiv {
+    margin-top: 20px;
+}
+
+
+/*场景执行热度*/
+
+.dataUseSurvey #sceneHot section {
+    padding-top: 4%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.dataUseSurvey .circle {
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    font-size: 100%;
+    float: left;
+    font-size: 12px;
+    color: #fff;
+    /*margin-top: 5%;*/
+}
+
+.dataUseSurvey .circle span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.dataUseSurvey #t1 {
+    background-color: #8884D8;
+    width: 100px;
+    height: 100px;
+    margin-top: 65px;
+}
+
+.dataUseSurvey #t2 {
+    background-color: #9DD8FF;
+    width: 90px;
+    height: 90px;
+}
+
+.dataUseSurvey #t3 {
+    background-color: #82CA9D;
+    width: 80px;
+    height: 80px;
+}
+
+.dataUseSurvey #t4 {
+    background-color: #839CED;
+    width: 75px;
+    height: 75px;
+}
+
+.dataUseSurvey #t5 {
+    background-color: #FFC658;
+    width: 70px;
+    height: 70px;
+}
+
+.dataUseSurvey #t6 {
+    background-color: #C1E5CE;
+    width: 65px;
+    height: 65px;
+}
+
+.dataUseSurvey #t7 {
+    background-color: #D0CEF0;
+    width: 60px;
+    height: 60px;
+}
+
+.dataUseSurvey #t8 {
+    background-color: #FFD78A;
+    width: 58px;
+    height: 58px;
+}
+
+.dataUseSurvey #t9 {
+    background-color: #B4C3F4;
+    width: 55px;
+    height: 55px;
+}
+
+.dataUseSurvey #t10 {
+    background-color: #DBDAF3;
+    width: 55px;
+    height: 55px;
+}
+
+
+/*用户绑定设备*/
+
+.bound-devices-charts {
+    width: 100%;
+    height: 280px;
+}
+
+#userbound section p {
+    text-align: center;
+}
+
+
+/*产品分类排行*/
+
+#product .progress {
+    height: 8px;
+}
+
+
+/*跨品牌设备绑定情况*/
+
+.bound-euipment-charts {
+    width: 470px;
+    height: 300px;
+    margin: auto;
+}
+
+
+/*扫描与分享*/
+
+#scanshare img {
+    margin-top: 10px;
+    margin-left: 10px;
+    float: left;
+}
+
+#scanshare span {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    text-align: left;
+}
+
+#scanshare #scanbound span {
+    color: #0099FF;
+}
+
+#scanshare #sharebound span {
+    color: #9966FF;
+}

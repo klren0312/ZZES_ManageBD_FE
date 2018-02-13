@@ -1,0 +1,1 @@
+var findApp = angular.module("findApp", ['ui.router', 'ngAnimate', 'toastr'])

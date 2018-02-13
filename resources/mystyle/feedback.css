@@ -1,0 +1,40 @@
+#feedback-page .personManage-search-div input {
+    width: 480px;
+}
+
+#feedback-page .personManage-search-div #searchbtn,
+#feedback-page .personManage-search-div #resetbtn {
+    position: relative;
+}
+
+#feedback-page .personManage-search-div #resetbtn {
+    left: 100px;
+}
+
+#feedback-page .personManage-search-div #searchbtn {
+    left: -408px;
+}
+
+#feedback-page .personManage-search-div #date {
+    position: relative;
+    right: -190px;
+}
+
+#feedback-page #left,
+#feedback-page #right {
+    width: 180px;
+    height: 28px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    text-align: left;
+}
+
+#feedback-page #middle {
+    background-color: #E5E5E5;
+    margin-left: 5px;
+    margin-right: 5px;
+}

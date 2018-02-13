@@ -1,0 +1,14 @@
+<main class="findpwd-page1" ng-controller="findPage1Controller">
+    <header>
+        <span>请输入您要找回密码的帐号</span>
+        <img class="img " src="images/findpassword/u78.png">
+    </header>
+    <section>
+        <input type="text" ng-model="finduser" class="findpwd-user" placeholder="请输入账号"><br>
+        <div>
+            <input type="text" class="identycode-input" ng-model="identycode" placeholder="验证码">
+            <img class="img " id="identyimg" src="http://139.196.76.185:8083/console/admin/verifica">
+        </div>
+        <button class="nextstep1" ng-click="firstnext()">下一步</button>
+    </section>
+</main>

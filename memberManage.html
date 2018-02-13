@@ -1,0 +1,57 @@
+﻿<main id="roleManage-page" class="memberManage-page" ng-controller="memberManageController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">系统成员管理 &gt; 成员管理</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>成员信息</p>
+        <!--错误信息-->
+        <p style="color:red;">{{errorinfo}}</p>
+        <button type="button" id="create-role" ng-click="create()">创建新成员</button>
+        <button type="button" id="delete-role" ng-click="delete(result)">删除</button>
+    </div>
+    <!--表格-->
+    <table id="faultRecord-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"></th>
+                <th>序号</th>
+                <th>登录账号</th>
+                <th>姓名</th>
+                <th>联系方式</th>
+                <th>联系邮箱</th>
+                <th>角色</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in items">
+                <td><input type="checkbox" ng-model="selected" ng-checked="selected" name="selected" ng-click="select(x.uid,$event)"></td>
+                <td>{{$index+1}}</td>
+                <td>{{x.UserName}}</td>
+                <td>{{x.Realname}}</td>
+                <td>{{x.Phone}}</td>
+                <td>{{x.Email}}</td>
+                <td>{{x.Name}}</td>
+                <td>
+                    <button class="watchDetails" ng-click="see(x.Phone)">查看</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--<h1>{{result}}</h1>-->
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+</main>

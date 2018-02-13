@@ -1,0 +1,14 @@
+.roleDetails-page #warning {
+    color: #ff0000;
+    margin-left: 20%;
+    margin-bottom: 20px;
+}
+
+.treecheck {
+    margin-left: 28%;
+    margin-top: -2%;
+}
+
+.treecheck li {
+    list-style: none;
+}

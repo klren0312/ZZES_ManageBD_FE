@@ -1,0 +1,126 @@
+﻿<main id="home-main" class="dataEquAnalysis-page dataUserAnalysis-page" ng-controller="dataUserAnalysisController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">数据分析 &gt; 用户分析</span>
+    </div>
+    <div class="home-second-title">
+        <p>用户分析</p>
+    </div>
+    <section class="mainContent">
+        <!--选择部分-->
+        <div class="selectdiv">
+            <div class="selectline">
+                <span>产品类目</span>
+                <!--selectbtnactive是按钮选中的样式-->
+                <button class="productbtn selectbtn " id="bt1" disabled>全部</button>
+                <button class="productbtn selectbtn selectbtnactive" id="bt2">大家电</button>
+                <button class="productbtn selectbtn" id="bt3">厨卫电器</button>
+                <button class="productbtn selectbtn" id="bt4">生活电器</button>
+                <button class="productbtn selectbtn" id="bt5">智能灯具</button>
+                <button class="productbtn selectbtn" id="bt6">监控安全类</button>
+                <button class="productbtn selectbtn" id="bt7">智能控制类</button>
+                <button class="productbtn selectbtn" id="bt8">传感器</button>
+            </div>
+            <div class="selectline">
+                <span>地区筛选</span>
+                <button class="placebtn selectbtn " id="bt9" disabled>全国</button>
+                <button class="placebtn selectbtn selectbtnactive" id="bt10">北京</button>
+                <button class="placebtn selectbtn" id="bt11">上海</button>
+                <button class="placebtn selectbtn" id="bt12">深圳</button>
+                <button class="placebtn selectbtn" id="bt13">其他</button>
+            </div>
+            <div class="selectline">
+                <span>时段分析</span>
+                <button class="datebtn selectbtn " id="bt14" disabled>全部</button>
+                <button class="datebtn selectbtn" id="bt15">上一周</button>
+                <button class="datebtn selectbtn selectbtnactive" id="bt16">上一个月</button>
+
+                <input type="text" name="datefilter" value="" style="width: 170px;text-align: center;" />
+            </div>
+        </div>
+        <!--图表部分-->
+        <div class="chartsdiv">
+            <header>
+                <button class="chartsbtn chartsbtnactive" ng-click="new()">
+                  <p class="btnheader">新用户数</p>
+                  <p class="btnnum">{{newNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="active()">
+                  <p class="btnheader">活跃用户数</p>
+                  <p class="btnnum">{{activeNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="share()">
+                  <p class="btnheader">分享绑定次数</p>
+                  <p class="btnnum">{{shareNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="employ()">
+                  <p class="btnheader">人均使用时长</p>
+                  <p class="btnnum">{{employNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="bind()">
+                  <p class="btnheader">已绑定设备用户数</p>
+                  <p class="btnnum">{{bindingNum}}</p>
+                </button>
+            </header>
+            <div class="chartsmain">
+                <new-user ng-if="newFlag&&newdata" id="newUser" newdata="newdata"></new-user>
+                <active-user ng-if="activeFlag" id="activeUser" activedata="activedata"></active-user>
+                <share-user ng-if="shareFlag" id="shareUser" sharedata="sharedata"></share-user>
+                <time-user ng-if="employFlag" id="timeUser" employdata="employdata"></time-user>
+                <bind-user ng-if="bindingFlag" id="bindUser" bindingdata="bindingdata"></bind-user>
+            </div>
+        </div>
+
+        <!--表格部分-->
+        <div class="tablediv">
+            <header>
+                <button ng-click="exportToExcel()" class="exportbtn"></button>
+            </header>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>新用户数</th>
+                        <th>环比</th>
+                        <th>活跃用户数</th>
+                        <th>环比</th>
+                        <th>分享绑定次数</th>
+                        <th>环比</th>
+                        <th>人均使用时长</th>
+                        <th>环比</th>
+                        <th>已绑定设备用户数</th>
+                        <th>环比</th>
+                    </tr>
+                    <tr ng-repeat="x in items">
+                        <td>{{x.timestamp}}</td>
+                        <td>{{x.new_users}}</td>
+                        <td>{{x.new_users_ratio}}</td>
+                        <td>{{x.active_users}}</td>
+                        <td>{{x.active_users_ratio}}</td>
+                        <td>{{x.share_users}}</td>
+                        <td>{{x.share_users_ratio}}</td>
+                        <td>{{x.employ_users}}</td>
+                        <td>{{x.employ_users_ratio}}</td>
+                        <td>{{x.binding_users}}</td>
+                        <td>{{x.binding_users_ratio}}</td>
+                    </tr>
+                </thead>
+            </table>
+            <!--分页-->
+            <nav class="select-page">
+                <ul class="pagination">
+                    <li>
+                        <a ng-click="Previous()"><span>上一页</span></a>
+                    </li>
+                    <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                        <a ng-click="selectPage(page)">{{page}}</a>
+                    </li>
+                    <li>
+                        <a ng-click="Next()"><span>下一页</span></a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </section>
+</main>

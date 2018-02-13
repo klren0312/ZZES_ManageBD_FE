@@ -1,0 +1,82 @@
+#platformaudit-page .platformbtn {
+    float: right;
+    width: 117px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#platformaudit-page .auditbtn {
+    width: 121px;
+    height: 37px;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(177, 177, 177, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #1E1E1E;
+    text-align: center;
+    margin-top: -6px;
+}
+
+#platformaudit-page .auditbtn:hover {
+    background-color: rgba(34, 143, 233, 1);
+    border-color: rgba(34, 143, 233, 1);
+    color: #fff;
+}
+
+#platformaudit-page .auditbtnactive {
+    background-color: rgba(34, 143, 233, 1);
+    border-color: rgba(34, 143, 233, 1);
+    color: #fff;
+}
+
+#platformaudit-page #deleteplatbtn {
+    position: absolute;
+    right: 260px;
+    top: 10px;
+}
+
+#platformaudit-page #createplatbtn {
+    position: absolute;
+    right: 380px;
+    top: 10px;
+}
+
+#platformaudit-page .dosth {
+    width: 54px;
+    height: 25px;
+    background-color: transparent;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+}
+
+#platformaudit-page #delpop {
+    background-color: #fff;
+}

@@ -1,0 +1,198 @@
+.dataEquAnalysis-page .mainContent {
+    padding: 20px 20px;
+}
+
+.dataEquAnalysis-page .selectdiv {
+    padding: 20px;
+    width: 100%;
+    height: 152px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dataEquAnalysis-page .selectline {
+    margin-bottom: 20px;
+}
+
+.dataEquAnalysis-page .selectbtn {
+    width: 93px;
+    height: 25px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #6B6B6B;
+}
+
+.dataEquAnalysis-page .selectbtn:hover {
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(0, 157, 217, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.dataEquAnalysis-page .selectbtnactive {
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(0, 157, 217, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.dataEquAnalysis-page .chartsdiv {
+    margin-top: 20px;
+    width: 100%;
+    height: 477px;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dataEquAnalysis-page .chartsdiv header {
+    width: 100%
+}
+
+.dataEquAnalysis-page .chartsbtn {
+    width: 25%;
+    height: 80px;
+    margin-right: -5px;
+    background-color: #F2F2F2;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+.dataEquAnalysis-page .chartsbtnactive {
+    background-color: #FFF;
+}
+
+.dataEquAnalysis-page .chartsbtn .btnheader {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+}
+
+.dataEquAnalysis-page .chartsbtn .btnnum {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #333333;
+}
+
+.dataEquAnalysis-page .chartsmain {
+    width: 100%;
+    height: 397px;
+}
+
+.access-equipment-charts,
+.active-equipment-charts,
+.error-equipment-charts,
+.outline-equipment-charts,
+.bind-equipment-charts {
+    width: 100%;
+    height: 397px;
+}
+
+.dataEquAnalysis-page .exportbtn {
+    width: 97px;
+    height: 25px;
+    float: right;
+    border: 0;
+    box-shadow: 0;
+    background-image: url("../../images/equipmentAnalysis/u1840.png");
+}
+
+.dataEquAnalysis-page .tablediv {
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 432px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}

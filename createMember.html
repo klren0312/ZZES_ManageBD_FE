@@ -1,0 +1,48 @@
+﻿<main id="createRole-page" class="createMember-page" ng-controller="createMemberController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">系统成员管理 &gt; 成员管理 &gt; 新建成员</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>新建成员</p>
+        <button type="button" id="goback" ng-click="goback()">返回</button>
+        <button type="button" id="save" ng-click="save()">保存</button>
+    </div>
+    <!--错误信息-->
+    <div class="alert alert-warning" role="alert" ng-show="error">
+        {{errorinfo}}
+    </div>
+    <section id="create-member">
+        <div>
+            <p><span class="flag">*</span>账号角色：
+                <select class="memberinput" ng-model="memberrole" ng-options="x.role for x in roles">
+                </select>
+            </p>
+        </div>
+        <div>
+            <p><span class="flag">*</span>登录账号：
+                <input class="memberinput" type="text" ng-model="memberlogin">
+            </p>
+        </div>
+        <div>
+            <p><span class="flag">*</span>登录密码：
+                <input class="memberinput" type="password" ng-model="memberpwd">
+            </p>
+        </div>
+        <div>
+            <p><span class="flag">*</span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+                <input class="memberinput" type="text" ng-model="membername">
+            </p>
+        </div>
+        <div>
+            <p><span class="flag">*</span>联系电话：
+                <input class="memberinput" type="text" ng-model="memberphone">
+            </p>
+        </div>
+        <div>
+            <p><span class="flag">*</span>联系邮箱：
+                <input class="memberinput" type="email" ng-model="memberemail">
+            </p>
+        </div>
+    </section>
+</main>

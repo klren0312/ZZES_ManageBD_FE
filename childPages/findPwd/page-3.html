@@ -1,0 +1,13 @@
+<main class="findpwd-page1" ng-controller="findPage3Controller">
+    <header>
+        <span>您正在找回帐号{{name}}的密码</span><a ui-sref="page1">[换一个帐号]</a>
+        <img class="img " src="images/findpassword/u78.png">
+    </header>
+    <section>
+        <span>设置新密码</span><br>
+        <input type="text" placeholder=" 设置新密码" ng-model="newpwd" class="findpwd-user">
+        <input type="text" placeholder="再次输入新密码" ng-model="renewpwd" class="findpwd-user">
+
+        <button class="nextstep1" ng-click="thirdnext()">完成</button>
+    </section>
+</main>

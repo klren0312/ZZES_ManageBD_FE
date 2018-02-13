@@ -1,0 +1,22 @@
+﻿<main class="userdetails-main" ng-controller="equipmentDetailsController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">设备管理 &gt; 设备信息 &gt; 设备详情</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>设备详情</p>
+        <button class="output-btn userdetails-back-btn" ng-click="goback()">返回</button>
+    </div>
+
+    <div>
+        <button class="userdetails-selectbtn userdetails-selectbtn-active" ng-click="baseinfo()">基本信息</button>
+        <button class="userdetails-selectbtn" ng-click="bindinfo()">关联信息</button>
+        <button class="userdetails-selectbtn" ng-click="errorinfo()">故障记录</button>
+        <button class="userdetails-selectbtn" ng-click="equipmentlog()">设备日志</button>
+        <button class="userdetails-selectbtn" ng-click="runanalysis()">运行分析</button>
+    </div>
+
+    <div class="pagination">
+        <ui-view></ui-view>
+    </div>
+</main>

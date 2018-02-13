@@ -1,0 +1,41 @@
+<main class="baseinfo-page" ng-controller="errorinfoController">
+    <div class="baseinfo-header row">
+        <p class="col-sm-6">故障上报记录：<span>{{totalRecord}}条</span></p>
+        <button class="errorexportbtn  col-sm-offset-4" ng-click="exportToExcel('#personManage-table','mysheet')">导出</button>
+    </div>
+    <!--表格-->
+    <table id="personManage-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>故障名称</th>
+                <th>故障参数</th>
+                <th>上报时间</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in items">
+                <td>{{$index + 1}}</td>
+                <td>{{x.name}}</td>
+                <td>{{x.parameter}}</td>
+                <td>{{x.reportTime|currentDate}}</td>
+                <td>{{x.remark}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+</main>

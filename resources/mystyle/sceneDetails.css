@@ -1,0 +1,298 @@
+#sceneDetails-page .scene-div .table td {
+    background-color: #F7F7F7;
+}
+
+#sceneName #sceneSetting {
+    position: relative;
+}
+
+#sceneDetails-page #sceneSetting-content {
+    padding: 40px 30px;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#sceneDetails-page #sceneSetting-title {
+    position: relative;
+    top: 50px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 14px;
+    left: 20px;
+    background-color: #fff;
+    padding: 11px;
+}
+
+#sceneDetails-page .sceneEdit,
+#sceneDetails-page .sceneDel {
+    width: 64px;
+    height: 28px;
+    background: inherit;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+#sceneSetting-content tbody {
+    text-align: center;
+}
+
+#sceneSetting-content td {
+    vertical-align: middle;
+}
+
+.descinput {
+    margin-top: 8px;
+    margin-left: 26px;
+}
+
+#sceneSetting-content .scene-tb-head {
+    background-color: #F7F7F7;
+}
+
+#sceneDetails-page .sceneEdit,
+#sceneDetails-page .sceneDel:hover {
+    background-color: rgba(68, 182, 174, 1);
+    border-color: rgba(68, 182, 174, 1);
+    color: #FFFFFF;
+}
+
+#sceneDetails-page .sceneEdit:hover {
+    background-color: rgba(60, 157, 150, 1);
+}
+
+#sceneDetails-page .sceneDel {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(201, 201, 201, 1);
+    color: #666666;
+}
+
+#sceneDetails-page .sceneDetails-table {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+#sceneDetails-page .sceneDetails-table th {
+    text-align: center;
+}
+
+#sceneSetting-content .addJudge {
+    width: 100%;
+    height: 29px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(232, 243, 253, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(211, 233, 252, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#sceneSetting-content .addJudge span {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+.addSceneJudgePop section {
+    padding: 0 20px 30px 20px;
+}
+
+.addSceneJudgePop #selectEquipment,
+.addSceneJudgePop #settingValue {
+    width: 100%;
+    margin-top: 30px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.addSceneJudgePop #selectEquipment {
+    height: 75px;
+}
+
+.addSceneJudgePop #settingValue {
+    height: 117px;
+}
+
+.addSceneJudgePop .info {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.addSceneJudgePop #selectEquipment,
+.addSceneJudgePop #settingValue {
+    position: relative;
+    padding: 20px;
+}
+
+.addSceneJudgePop #selectEquipment .info {
+    position: relative;
+    top: -35px;
+    left: -10px;
+}
+
+.addSceneJudgePop #settingValue .info {
+    position: relative;
+    top: -55px;
+    left: -10px;
+}
+
+.addSceneJudgePop #selectEquipment select {
+    width: 124px;
+    height: 28px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    text-align: center;
+}
+
+.addSceneJudgePop #selectEquipment #devicemac {
+    margin-left: 58px;
+}
+
+.addSceneJudgePop #settingValue #activeselect {
+    margin: 20px auto auto -18px;
+    width: 124px;
+    height: 28px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    text-align: center;
+}
+
+.addSceneJudgePop #settingValue .activeparam {
+    margin-left: 210px;
+    margin-top: -24px;
+    width: 124px;
+    height: 28px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    text-align: center;
+}
+
+.addSceneJudgePop #settingValue #boolselect {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.addSceneJudgePop #settingValue label {
+    margin-left: 20px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+.addSceneJudgePop #settingValue #valueselect {
+    width: 124px;
+    height: 28px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    margin-top: -4px;
+    margin-left: 56px;
+    text-align: center;
+}
+
+#sceneAction {
+    margin-top: 20px;
+}
+
+#sceneDetails-page .sceneBtn {
+    margin-top: 20px;
+    width: 117px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+#sceneDetails-page .sceneBtn:hover {
+    background-color: rgba(35, 133, 199, 1);
+}
+
+.prepareSelect {
+    width: 112px;
+    height: 24px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+    text-align: center;
+}

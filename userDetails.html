@@ -1,0 +1,23 @@
+﻿<main class="userdetails-main" ng-controller="userDetailsController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">用户管理 &gt; 用户列表 &gt; 用户详情</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>用户详情</p>
+        <a class="output-btn userdetails-back-btn" href="#!/personManage">返回</a>
+    </div>
+
+    <div>
+        <button class="userdetails-selectbtn" ng-click="baseinfo()">基本信息</button>
+        <button class="userdetails-selectbtn" ng-click="bindinfo()">关联信息</button>
+        <button class="userdetails-selectbtn" ng-click="sceneinfo()">场景信息</button>
+        <button class="userdetails-selectbtn" ng-click="sharerecord()">分享记录</button>
+        <button class="userdetails-selectbtn" ng-click="aftersale()">售后反馈</button>
+    </div>
+
+    <div class="pagination">
+        <ui-view></ui-view>
+    </div>
+    <!--<h2>{{user}}</h2>-->
+</main>

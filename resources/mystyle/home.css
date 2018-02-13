@@ -1,0 +1,315 @@
+#home-main {
+    background-color: #F7F7F7;
+    height: 300%;
+}
+
+.home-title {
+    position: relative;
+    left: 0px;
+    top: -20px;
+    width: 100%;
+    height: 42px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    background: inherit;
+    background-color: rgba(247, 247, 247, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(247, 247, 247, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.home-title .home-text {
+    position: relative;
+    left: 40px;
+    top: 7px;
+    font-size: 13px;
+    color: #333333;
+    z-index: 100;
+    word-wrap: break-word;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+    visibility: visible;
+}
+
+.home-second-title {
+    width: 100%;
+    height: 50px;
+    padding: 12px 12px 12px 20px;
+    position: relative;
+    top: -20px;
+    background-color: #fff;
+}
+
+.home-second-title p {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    color: #333333;
+    line-height: normal;
+}
+
+.equipment-analysis,
+.user-analysis,
+.information-report {
+    width: 706px;
+    height: 340px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    /*background-color: red;*/
+    /*left: 20px;*/
+}
+
+.equipment-coverage {
+    /*position: relative;
+    bottom: 1014px;*/
+    width: 450px;
+    height: 442px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.percentage-equipment {
+    /*position: relative;
+    top: -1001px;*/
+    width: 450px;
+    height: 323px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.percentage-usershare {
+    /*position: relative;
+    top: -988px;*/
+    width: 450px;
+    height: 261px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    background: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.equipment-coverage,
+.percentage-equipment,
+.percentage-usershare {
+    /*background-color: blue;
+    left: 745px;*/
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+
+/*图表*/
+
+
+/*上升箭头*/
+
+.upinfo {
+    color: #FE5500;
+}
+
+
+/*下降箭头*/
+
+.downinfo {
+    color: #7EC856;
+}
+
+
+/*设备分析*/
+
+.chartdiv1,
+.chartdiv2,
+.chartdiv3 {
+    padding-top: 15px;
+}
+
+.upinfo1 {
+    position: relative;
+    top: 60px;
+    width: 70px;
+}
+
+.upinfo2 {
+    position: relative;
+    top: 140px;
+    width: 70px;
+}
+
+.infodiv p {
+    margin: 0 0 -12px;
+}
+
+.chartheader {
+    color: #000;
+    font-weight: bold;
+}
+
+.equipment-analysis-charts,
+#equipanalysis {
+    width: 450px;
+    height: 262px;
+    /*background-color: red;*/
+}
+
+
+/*用户分析*/
+
+.upinfo3 {
+    position: relative;
+    top: 55px;
+    width: 70px;
+}
+
+.upinfo4 {
+    position: relative;
+    top: 137px;
+    width: 70px;
+}
+
+.user-analysis-charts {
+    width: 405px;
+    height: 276px;
+}
+
+
+/*信息上报*/
+
+.chartdiv3 a:link {
+    color: blue;
+}
+
+.chartdiv3 span {
+    color: #FF6600;
+    margin-right: 10px;
+}
+
+.info-error {
+    color: red;
+}
+
+.info-data-charts {
+    width: 405px;
+    height: 276px;
+}
+
+
+/*全国设备覆盖情况*/
+
+.equipment-coverage {
+    padding-top: 15px;
+    background: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+}
+
+.equipment-coverage-map {
+    width: 330px;
+    height: 310px;
+    margin-top: -60px;
+    margin-left: 56px;
+    float: left;
+}
+
+.equipment-coverage span {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #8C8C8C;
+    text-align: center;
+    line-height: 36px;
+}
+
+.equipment-coverage .city-data {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
+    text-align: center;
+    line-height: 36px;
+    color: #333333;
+    margin: 0 0 0 17px;
+}
+
+
+/*接入设备类目占比*/
+
+.percentage-equipment-charts {
+    margin-top: -44px;
+    margin-left: 11px;
+    width: 400px;
+    height: 250px;
+}
+
+.percentage-equipment {
+    padding-top: 15px;
+    background: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+}
+
+
+/*用户分享占比*/
+
+.percentage-usershare {
+    padding-top: 15px;
+    background: #fff;
+    border: 1px solid rgba(228, 228, 228, 1);
+}
+
+.percentage-usershare-charts {
+    width: 400px;
+    height: 250px;
+    margin-top: -60px;
+}

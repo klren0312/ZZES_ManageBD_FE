@@ -1,0 +1,249 @@
+.equipmentbaseinfo thead {
+    text-align: left;
+}
+
+.baseinfo-page .equipdetails-info-left {
+    text-align: left;
+    border-right: 0;
+}
+
+.baseinfo-page .equipdetails-info-right {
+    margin-top: -336px;
+}
+
+.baseinfo-page .equipdetails-info-right p {
+    margin-top: 45px;
+}
+
+.baseinfo-page .equipdetails-param-right {
+    margin-top: -405px;
+}
+
+.baseinfo-page .equipdetails-param-right p {
+    margin-top: 48px;
+}
+
+.equip-baseinfo-header {
+    width: 100%;
+    height: 133px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(247, 247, 247, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(242, 242, 242, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.equipbindbtn {
+    width: 53px;
+    height: 26px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(121, 121, 121, 1);
+    border-radius: 5px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.errorexportbtn {
+    width: 117px;
+    height: 32px;
+    margin-top: -10px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.logtable {
+    table-layout: fixed;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.run-time-analysis {
+    width: 93px;
+    height: 25px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #6B6B6B;
+}
+
+.run-time-analysis:hover {
+    background-color: rgba(0, 157, 217, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.run-time-analysisactive {
+    background-color: rgba(0, 157, 217, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 153, 255, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.runanalysis-page .chartsdiv header {
+    width: 100%
+}
+
+.runanalysis-page .chartsbtn {
+    width: 25%;
+    height: 80px;
+    margin-right: -5px;
+    background-color: #F2F2F2;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-top: 0px;
+    border-right: 0px;
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+.runanalysis-page .chartsbtnactive {
+    background-color: #FFF;
+}
+
+.runanalysis-page .chartsbtn .btnheader {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+}
+
+.runanalysis-page .chartsbtn .btnnum {
+    font-family: '微软雅黑 Bold', '微软雅黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    color: #333333;
+}
+
+.runanalysis-page .chartsmain {
+    width: 100%;
+    height: 397px;
+}
+
+
+/*图表*/
+
+.start-time-charts {
+    width: 100%;
+    height: 397px;
+}
+
+.run-times-charts {
+    width: 100%;
+    height: 397px;
+}
+
+.outline-times-charts {
+    width: 100%;
+    height: 397px;
+}
+
+.click-fun-charts {
+    width: 100%;
+    height: 397px;
+}
+
+
+/*表格*/
+
+.runanalysis-page .exportbtn {
+    width: 97px;
+    height: 25px;
+    float: right;
+    border: 0;
+    box-shadow: 0;
+    background-image: url("../../images/equipmentAnalysis/u1840.png");
+}
+
+.runanalysis-page .tablediv {
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%;
+    height: 432px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(228, 228, 228, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}

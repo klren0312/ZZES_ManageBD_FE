@@ -1,0 +1,125 @@
+﻿<main id="home-main" class="dataEquAnalysis-page" ng-controller="dataEquAnalysisController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">数据分析 &gt; 设备分析</span>
+    </div>
+    <div class="home-second-title">
+        <p>设备分析</p>
+    </div>
+    <section class="mainContent">
+        <!--选择部分-->
+        <div class="selectdiv">
+            <div class="selectline">
+                <span>产品类目</span>
+                <!--selectbtnactive是按钮选中的样式-->
+                <button class="productbtn selectbtn " id="bt1" disabled>全部</button>
+                <button class="productbtn selectbtn selectbtnactive" id="bt2">大家电</button>
+                <button class="productbtn selectbtn" id="bt3">厨卫电器</button>
+                <button class="productbtn selectbtn" id="bt4">生活电器</button>
+                <button class="productbtn selectbtn" id="bt5">智能灯具</button>
+                <button class="productbtn selectbtn" id="bt6">监控安全类</button>
+                <button class="productbtn selectbtn" id="bt7">智能控制类</button>
+                <button class="productbtn selectbtn" id="bt8">传感器</button>
+            </div>
+            <div class="selectline">
+                <span>地区筛选</span>
+                <button class="placebtn selectbtn " id="bt9" disabled>全国</button>
+                <button class="placebtn selectbtn selectbtnactive" id="bt10">北京</button>
+                <button class="placebtn selectbtn" id="bt11">上海</button>
+                <button class="placebtn selectbtn" id="bt12">深圳</button>
+                <button class="placebtn selectbtn" id="bt13">其他</button>
+            </div>
+            <div class="selectline">
+                <span>时段分析</span>
+                <button class="datebtn selectbtn " id="bt14" disabled>全部</button>
+                <button class="datebtn selectbtn " id="bt15">上一周</button>
+                <button class="datebtn selectbtn selectbtnactive" id="bt16">上一个月</button>
+                <input type="text" name="datefilter" value="" style="width: 170px;text-align: center;" />
+            </div>
+        </div>
+
+        <!--图表部分-->
+        <div class="chartsdiv">
+            <header>
+                <button class="chartsbtn chartsbtnactive" ng-click="access()">
+                  <p class="btnheader">接入设备数</p>
+                  <p class="btnnum">{{joinNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="active()">
+                  <p class="btnheader">活跃设备数</p>
+                  <p class="btnnum">{{activeNum}}</p>
+                </button>
+                <button class="chartsbtn" ng-click="outline()">
+                  <p class="btnheader">离线设备数</p>
+                  <p class="btnnum">{{offlineNum}}</p>
+                </button>
+                <!--<button class="chartsbtn" ng-click="error()">
+                  <p class="btnheader">故障设备数</p>
+                  <p class="btnnum">1920</p>
+                </button>-->
+                <button class="chartsbtn" ng-click="bind()">
+                  <p class="btnheader">被绑定设备存量</p>
+                  <p class="btnnum">{{bindingNum}}</p>
+                </button>
+            </header>
+
+            <div class="chartsmain">
+                <access-equipment ng-if="joinFlag&&joindata" id="accessEquipment" joindata="joindata"></access-equipment>
+                <active-equipment ng-if="activeFlag" id="activeEquipment" activedata="activedata"></active-equipment>
+                <outline-equipment ng-if="offlineFlag" id="outlineEquipment" offlinedata="offlinedata"></outline-equipment>
+                <bind-equipment ng-if="bindingFlag" id="bindEquipment" bindingdata="bindingdata"></bind-equipment>
+            </div>
+        </div>
+
+        <!--表格部分-->
+        <div class="tablediv" style="text-align: center;">
+            <header>
+                <button ng-click="getCsv()" class="exportbtn"></button>
+            </header>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>接入设备数</th>
+                        <th>环比</th>
+                        <th>活跃设备数</th>
+                        <th>环比</th>
+                        <th>离线设备数</th>
+                        <th>环比</th>
+                        <!--<th>故障设备数</th>
+                        <th>环比</th>-->
+                        <th>绑定设备数</th>
+                        <th>环比</th>
+                    </tr>
+                    <tr ng-repeat="x in items">
+                        <td>{{x.timestamp}}</td>
+                        <td>{{x.join_device}}</td>
+                        <td>{{x.join_device_ratio}}</td>
+                        <td>{{x.active_device}}</td>
+                        <td>{{x.active_device_ratio}}</td>
+                        <td>{{x.off_line_device}}</td>
+                        <td>{{x.off_line_device_ratio}}</td>
+                        <!--<td>{{x.error}}</td>
+                        <td>{{x.errormonth}}</td>-->
+                        <td>{{x.binding_device}}</td>
+                        <td>{{x.binding_device_ratio}}</td>
+                    </tr>
+                </thead>
+            </table>
+            <!--分页-->
+            <nav class="select-page">
+                <ul class="pagination">
+                    <li>
+                        <a ng-click="Previous()"><span>上一页</span></a>
+                    </li>
+                    <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                        <a ng-click="selectPage(page)">{{page}}</a>
+                    </li>
+                    <li>
+                        <a ng-click="Next()"><span>下一页</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+</main>

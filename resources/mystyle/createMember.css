@@ -1,0 +1,27 @@
+.createMember-page #create-member {
+    margin-left: 20%;
+}
+
+.createMember-page #create-member div {
+    margin-top: 20px;
+}
+
+.createMember-page #create-member .flag {
+    color: #ff0000;
+}
+
+.createMember-page .memberinput {
+    width: 453px;
+    height: 30px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #5E5E5E;
+}
+
+.createMember-page #warning {
+    color: #ff0000;
+    margin-bottom: 20px;
+}

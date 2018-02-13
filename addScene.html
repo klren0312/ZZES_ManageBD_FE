@@ -1,0 +1,293 @@
+﻿<main id="addScene-page" ng-controller="addSceneController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">场景管理 &gt; 添加场景</span>
+    </div>
+    <div id="addSceneDiv">
+        <header class="home-second-title personManage-second-title">
+            <p>添加新场景</p>
+            <button type="button" ng-click="goback()" class="output-btn" data-toggle="modal" data-target=".bs-example-modal-lg">
+              返回
+            </button>
+        </header>
+        <section>
+            <div id="sceneName">
+                <p id="sceneNameSetting">场景名称
+                    <input type="text" ng-model="scene" required>
+                    <button type="button " class="addSceneBtn" ng-click="saveScene()" data-dismiss="modal " ng-if="!viewTheAdd">保存场景</button>
+                </p>
+            </div>
+        </section>
+        <div ng-show="viewTheAdd">
+            <!--<p>场景id:{{sceneid}}</p>-->
+            <section id="sceneSetting" ng-repeat="x in sceneDetails">
+                <!--{{x.id}}-->
+                <span id="sceneSetting-title">条件规则组设置({{x.desp}})</span>
+                <!--<span id="sceneSetting-title">条件规则组{{x.id}}设置({{x.desp}})</span>-->
+                <div id="sceneSetting-content">
+                    <!--判断表格-->
+                    <section id="sceneJudge">
+                        <table cellpadding="20px" class="table table-bordered sceneDetails-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="scene-tb-head">选择设备</th>
+                                    <th class="scene-tb-head">设备监控值</th>
+                                    <th class="scene-tb-head">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="y in x.deviceAndRuleList">
+                                <tr>
+                                    <td rowspan="50">判断{{$index+1}}</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="50">{{y.deviceDefinition.deviceName}}</td>
+                                </tr>
+                                <tr ng-repeat="z in y.triggerRuleList">
+                                    <td>
+                                        <div>
+                                            <span>{{z.parameter}} {{z.operator|compareType}} {{z.value}} {{z.desp}}</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!--{{x.id}}-->
+                                        <!--删除 接口-->
+                                        <!--<p>判断条件id:{{z.id}}</p>-->
+                                        <!--<button class="sceneEdit" ng-click="judgesEdit()">修改</button>-->
+                                        <button class="sceneDel" ng-click="judgesDel(z.id)">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="addJudge" data-toggle="modal" data-target="#addJudge" ng-click="clear(x.id)">
+                        <span>+添加</span>
+                    </button>
+                    </section>
+                    <!--动作表格-->
+                    <section id="sceneAction">
+                        <table cellpadding="20px" class="table table-bordered sceneDetails-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="scene-tb-head">选择设备</th>
+                                    <th class="scene-tb-head">设备监控值</th>
+                                    <th class="scene-tb-head">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="y in x.deviceAndActionList">
+                                <tr>
+                                    <td rowspan="50">动作{{$index+1}}</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="50">{{y.deviceDefinition.deviceName}}</td>
+                                </tr>
+                                <tr ng-repeat="z in y.deviceActionList">
+                                    <td>
+                                        <div>
+                                            <span>{{z.parameter}} {{z.value}}</span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <!--{{x.id}}-->
+                                        <!--删除 接口-->
+                                        <!--<button class="sceneEdit" ng-click="actionsEdit()">修改</button>-->
+                                        <button class="sceneDel" ng-click="actionsDel(z.id)">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button class="addJudge" data-toggle="modal" data-target="#addAction" ng-click="clear(x.id)">
+                        <span>+添加</span>
+                    </button>
+                    </section>
+                    <button class="addSceneBtn" ng-click="deleteSceneGroup(x.id)">删除规则组</button>
+                </div>
+            </section>
+            <button type="button" data-toggle="modal" data-target="#addSceneGroup" class="addSceneBtn">
+              新增规则组
+            </button>
+            <button type="button" class="addSceneBtn" ng-click="deleteScene()">
+              删除场景
+            </button>
+            <button type="button" class="addSceneBtn" ng-click="goback()" ng-show="viewTheAdd">
+              保存场景并退出
+            </button>
+        </div>
+    </div>
+
+
+    <!--<edit-scene></edit-scene>-->
+
+    <!-- 弹框 -->
+    <!--新增规则组是否使用默认-->
+    <div class="modal fade sceneManageClosePop addSceneGrouPop  " tabindex="-1" role="dialog" id="addSceneGroup">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>新建规则组</span>
+                </header>
+                <section>
+                    <table>
+                        <tr>
+                            <td class="group-title">规则组描述：</td>
+                            <td><input type="text" ng-model="sceneGroupDesc"></td>
+                        </tr>
+                        <tr>
+                            <td class="group-title">是否使用默认规则组：</td>
+                            <td>
+                                <div>
+                                    <input type="radio" name="default" ng-model="selectDefault" value="true"> 是
+                                    <input type="radio" name="default" ng-model="selectDefault" value="false"> 否
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                <footer>
+                    <button type="button" class="ok" ng-click="addSceneGroup()" data-dismiss="modal">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!--判断场景弹框-->
+    <div class="modal fade sceneManageClosePop addSceneJudgePop" tabindex="-1" role="dialog" id="addJudge">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>添加判断条件</span> 规则组id:{{sceneGroupId}}
+                </header>
+                <section>
+                    <div id="selectEquipment">
+                        <span class="info">选择设备</span>
+                        <!--获取动态选项-->
+                        <select ng-model="category" ng-options="x.category for x in categorys" ng-change="changeType(category)">
+                            <option value="">--产品类目--</option>
+                        </select>
+                        <!--<select id="devicemac" ng-model="devicedefinition" ng-options="x.deviceName for x in devicedefinitions" ng-change="changeDev(devicedefinition)">
+                             
+                        </select>-->
+                        <select id="devicemac" ng-model="devicedefinition" ng-change="changeDev(devicedefinition)">
+                             <option value="">--设备名（mac)--</option>
+                             <option ng-repeat="x in devicedefinitions"  value="{{x.id}}">{{x.deviceName}}({{x.mac}})</option>
+                             {{devdefinitionid}}
+                        </select>
+                    </div>
+                    <div id="settingValue">
+                        <span class="info">设置监控值</span>
+                        <!--获取动态选项-->
+                        <select id="activeselect" ng-model="devicedetail" ng-options="p.displayName for p in devicedetails" ng-change="changeParam(devicedetail)">
+                            <option value="">--参数值--</option>
+                        </select>
+
+                        <!--动态数据值显示-->
+                        <div ng-switch="type">
+                            <!--bool值-->
+                            <div class="activeparam" ng-switch-when="bool">
+                                <label ng-repeat="x in data_ranges">
+                                    <input id="boolselect" class="value" type="radio" name="radio" ng-model="$parent.$parent.selectvalue" value="{{x}}">{{x}}
+                                </label>
+                                <input type="text" class="descinput" ng-model="$parent.selectText" placeholder="描述">
+                            </div>
+                            <!--enum值-->
+                            <div class="activeparam" ng-switch-when="enum">
+                                <select id="valueselect" class="value" ng-model="$parent.selectvalue" ng-options="x for x in data_ranges">
+                                    <option value="">--值--</option>
+                                </select>
+                                <input type="text" ng-model="$parent.selectText" placeholder="描述">
+                            </div>
+                            <!--int值-->
+                            <div class="getSelect" style="margin-top:15px;" ng-switch-when="int|float" ng-switch-when-separator="|">
+                                <select ng-model="$parent.selectvalue " class="col-md-3 prepareSelect">
+                                    <option value=""> --判断-- </option>
+                                    <option value="00">&ne;</option>
+                                    <option value="01"> = </option>
+                                    <option value="02">&lt;</option>
+                                    <option value="03">&gt;</option>
+                                    <option value="04">&lt;=</option>
+                                    <option value="05">&gt;=</option>
+                                </select>
+                                <input type="range" class="col-md-3" style="width: 115px;margin-left: 26px;" ng-model="$parent.theSelectValue" name="points" min="{{data_ranges.min}}" max="{{data_ranges.max}}" />
+                                <span class="col-md-3" style="font-size: 20px;text-align: center;"> {{theSelectValue}} </span>
+                                <input type="text" class=" col-md-3" ng-model="$parent.selectText" placeholder="描述">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--测试数据获取-->
+                <!--{{category.category}}-{{devicedefinition.deviceName}}-{{devicedetail.attr_name}}-{{selectvalue}}-->
+                <footer>
+                    <button type="button" class="ok" ng-click="pushJudge()" data-dismiss="modal">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--动作场景弹窗-->
+    <div class="modal fade sceneManageClosePop addSceneJudgePop addSceneActionPop" tabindex="-1" role="dialog" id="addAction">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>添加动作</span> 规则组id:{{sceneGroupId}}
+                </header>
+                <section>
+                    <div id="selectEquipment">
+                        <span class="info">选择设备</span>
+                        <!--获取动态选项-->
+                        <select ng-model="category" ng-options="x.category for x in categorys" ng-change="changeType(category)">
+                            <option value="">--产品类目--</option>
+                        </select>
+                        <select id="devicemac" ng-model="devicedefinition" ng-change="changeDev(devicedefinition)">
+                             <option value="">--设备名（mac)--</option>
+                             <option ng-repeat="x in devicedefinitions"  value="{{x.id}}">{{x.deviceName}}({{x.mac}})</option>
+                        </select>
+                    </div>
+                    <div id="settingValue">
+                        <span class="info">设置动作值</span>
+                        <!--获取动态选项-->
+                        <select id="activeselect" ng-model="devicedetail" ng-options="p.displayName for p in devicedetails" ng-change="changeParam(devicedetail)">
+                            <option value="">--参数值--</option>
+                        </select>
+                        <!--动态数据值显示-->
+                        <div ng-switch="type">
+                            <!--bool值-->
+                            <div class="activeparam" ng-switch-when="bool">
+                                <label ng-repeat="x in data_ranges">
+                                    <input id="boolselect" class="value" type="radio" name="radio" ng-model="$parent.$parent.selectvalue" value="{{x}}">{{x}}
+                                </label>
+                                <!--<input type="text" class="descinput" ng-model="$parent.selectText" placeholder="描述">-->
+                            </div>
+                            <!--enum值-->
+                            <div class="activeparam" ng-switch-when="enum">
+                                <select id="valueselect" class="value" ng-model="$parent.selectvalue" ng-options="x for x in data_ranges">
+                                    <option value="">--值--</option>
+                                </select>
+                                <!--<input type="text" ng-model="$parent.selectText" placeholder="描述">-->
+                            </div>
+                            <!--int值-->
+                            <div class="getSelect" style="margin-top:15px;" ng-switch-when="int|float" ng-switch-when-separator="|">
+                                <select ng-model="$parent.selectvalue " class="col-md-3 prepareSelect">
+                                    <option value=""> --判断-- </option>
+                                    <option value="00">&ne;</option>
+                                    <option value="01"> = </option>
+                                    <option value="02">&lt;</option>
+                                    <option value="03">&gt;</option>
+                                    <option value="04">&lt;=</option>
+                                    <option value="05">&gt;=</option>
+                                </select>
+                                <input type="range" class="col-md-3" style="width: 115px;margin-left: 26px;" ng-model="$parent.theSelectValue" name="points" min="{{data_ranges.min}}" max="{{data_ranges.max}}" />
+                                <span class="col-md-3" style="font-size: 20px;text-align: center;"> {{theSelectValue}} </span>
+                                <input type="text" class=" col-md-3" ng-model="$parent.selectText" placeholder="描述">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <button type="button" class="ok" ng-click="pushAction()" data-dismiss="modal">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+
+</main>

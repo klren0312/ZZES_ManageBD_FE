@@ -1,0 +1,55 @@
+﻿<main id="sceneManage-main" ng-controller="sceneManageController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">场景管理</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>场景列表</p>
+        <button type="button" ng-click="addScene()" class="output-btn" data-toggle="modal" data-target=".bs-example-modal-lg">
+            新增场景
+        </button>
+    </div>
+    <div id="sceneManage-content">
+        <div class="scene-div" ng-repeat="x in scenes">
+            <header>
+                <!--<div ng-model="sceneId" ng-show="false">{{x.id}}</div>-->
+                <div id="header-left">
+                    <span id="gohome">{{x.name}}</span>
+                    <!--<span id="on">启用</span>-->
+                </div>
+                <div id="header-right">
+                    <button data-ng-click="watchDetails(x.id)">查看</button>
+                    <!--<button data-toggle="modal" data-target="#close">关闭</button>-->
+                    <button data-toggle="modal" data-target="#del" ng-click="setId(x.id)">删除</button>
+                </div>
+            </header>
+            <!--<table class="table table-bordered">
+                <tr>
+                    <td>绑定设备数：8,029</td>
+                    <td>累计启动次数：45,920</td>
+                    <td>累计分享次数：29,092</td>
+                </tr>
+            </table>-->
+        </div>
+    </div>
+    <!--删除弹框 -->
+    <div class="modal fade sceneManageDelPop" tabindex="-1" role="dialog" id="del">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <header>
+                    <span>删除场景提示</span>
+                </header>
+                <section>
+                    <img id="u4871_img" class="img " src="images/equipmentDetails/u3613.png">
+                    <p id="p1">确认删除此场景？</p>
+                    <p id="p2">删除后，已启用此场景的设备将失去联动。请注意，场景不可恢复，需重新添加。</p>
+                </section>
+                <footer>
+                    <button type="button" class="ok" ng-click="deleteScene(sceneId)" data-dismiss="modal">确认</button>
+                    <button type="button" class="cancel" data-dismiss="modal">关闭</button>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+</main>

@@ -1,0 +1,278 @@
+.output-btn:hover {
+    background-color: rgba(35, 133, 199, 1))
+}
+
+.userdetails-back-btn {
+    line-height: 25px;
+    text-align: center;
+}
+
+.userdetails-main a {
+    text-decoration-line: none;
+}
+
+.userdetails-main a:hover {
+    color: #fff;
+}
+
+.userdetails-selectbtn {
+    width: 120px;
+    height: 37px;
+    margin-left: 20px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(177, 177, 177, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #1E1E1E;
+    text-align: center;
+}
+
+.userdetails-selectbtn:hover {
+    width: 121px;
+    height: 37px;
+    margin-left: 20px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(68, 175, 247, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(68, 175, 247, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.userdetails-selectbtn-active {
+    background-color: rgba(68, 175, 247, 1);
+    border-color: rgba(68, 175, 247, 1);
+    color: #FFFFFF;
+}
+
+.pagination {
+    width: 100%;
+    height: 516px;
+    padding: 20px;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    /*background-color: #fef;*/
+}
+
+
+/*基本页面分页*/
+
+.baseinfo-page,
+.sceneinfo-page,
+.sharerecord-page,
+.aftersale-page {
+    width: 100%;
+    /*height: 516px;*/
+    background: inherit;
+    background-color: rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(201, 201, 201, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.baseinfo-page a {
+    color: black;
+}
+
+.baseinfo-page .nav-tabs {
+    background-color: #F7F7F7;
+}
+
+.baseinfo-page .tab-content {
+    padding: 20px;
+}
+
+.baseinfo-page .industrytable {
+    padding: 35px 60px;
+    width: 100%;
+    height: 133px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(247, 247, 247, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(242, 242, 242, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.baseinfo-page .industrytable td {
+    height: 40px;
+}
+
+.baseinfo-page .industrytable thead td {
+    width: 75%;
+}
+
+.baseinfo-page .details-info-left {
+    width: 50%;
+    margin-top: -20px;
+    text-align: center;
+    margin-left: 20px;
+    border-right: 1px solid #000;
+}
+
+.baseinfo-page .details-info-left p {
+    margin-top: 45px;
+}
+
+.baseinfo-page .details-info-right {
+    width: 40%;
+    float: right;
+    margin-top: -295px;
+}
+
+#escrowaccount thead {
+    background-color: #F2F2F2;
+    text-align: center;
+}
+
+
+/*关联信息页面*/
+
+.baseinfo-page .baseinfo-header {
+    height: 55px;
+    padding: 20px;
+}
+
+.baseinfo-page thead {
+    background-color: #F2F2F2;
+    text-align: left;
+}
+
+
+/*场景信息*/
+
+.sceneinfo-page {
+    padding: 20px;
+}
+
+.sceneinfo-div {
+    width: 100%;
+    height: 392px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(215, 215, 215, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sceneinfo-div header {
+    padding: 15px;
+}
+
+.sceneinfo-page #header-left #gohome {
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+
+.sceneinfo-page #on {
+    font-weight: 400;
+    font-style: normal;
+    color: #0066FF;
+    font-size: 14px;
+    text-align: left;
+}
+
+.sceneinfo-div header #header-right {
+    float: right;
+    margin-top: -20px;
+}
+
+.sceneinfo-div header #header-right span:nth-child(1) {
+    margin-right: 10px;
+}
+
+.sceneinfo-div .table>tbody>tr>td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.sceneinfo-div th {
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+.sleep-scene {
+    margin-top: 20px;
+}
+
+
+/*分享记录*/
+
+.sharerecord-page header,
+.aftersale-page header {
+    padding: 10px;
+    height: 55px;
+}
+
+.sharerecord-page button,
+.aftersale-page button {
+    width: 117px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    float: right;
+}
+
+.sharerecord-page th,
+.aftersale-page th {
+    background-color: #F3F3F3;
+}

@@ -1,0 +1,65 @@
+<main ng-controller="personalMsgController">
+    <div id="u9135">
+        <p><span>上 次 登 录： {{time}}	</span></p>
+    </div>
+    <div class="msg">
+        <div id="msg1">
+            <p><span>
+				{{username}}，欢迎您
+			</span></p>
+        </div>
+        <div id="msg2">
+            <p><span>
+				您的角色是：{{Name}}
+			</span></p>
+        </div>
+    </div>
+    <div id="u9105">
+        <p><span>账号信息</span></p>
+    </div>
+
+    <div class="accountMsg">
+        <div id="u9126" class="ax_default _垂直线">
+            <img id="u9126_img" class="img " src="images/个人中心/u9126.png" />
+        </div>
+        <div id="con1">
+            <p><span>登录账号：</span></p>
+        </div>
+        <div id="con2">
+            <p><span>登录密码：</span></p>
+        </div>
+        <div id="con3">
+            <p><span>姓&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;名：</span></p>
+        </div>
+        <div id="con1-1">
+            <!--登录账号-->
+            <p><span>{{username}}</span></p>
+        </div>
+        <div id="con2-1">
+            <!--登录密码-->
+            <p><span>{{password}}</span></p>
+        </div>
+        <div id="con2-2">
+            <p>
+                <a ui-sref="changePwd">修改密码</a>
+            </p>
+        </div>
+        <div id="con3-1">
+            <p><input type="text" ng-model="Realname" placeholder="王小明" /></p>
+        </div>
+        <div id="con-right-1">
+            <p><span>联系电话：</span>
+                <input type="number" ng-model="Phone" placeholder="12345678910" />
+            </p>
+        </div>
+        <div id="con-right-2">
+            <p><span>联系邮箱：</span>
+                <input type="email" ng-model="Email" placeholder="123@456.com" />
+            </p>
+        </div>
+        <div id="u9132">
+            <button id="u9132_div" id="u9133" ng-click="save()">保&nbsp;&nbsp; 存</button>
+        </div>
+    </div>
+
+</main>

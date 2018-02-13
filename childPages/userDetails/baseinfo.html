@@ -1,0 +1,94 @@
+<main class="baseinfo-page" ng-controller="baseinfoController">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#industryapp" aria-controls="industryapp" role="tab" data-toggle="tab">行业App账号</a></li>
+        <li role="presentation"><a href="#escrowaccount" aria-controls="escrowaccount" role="tab" data-toggle="tab">第三方平台账号</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class=" tab-pane active" id="industryapp">
+            <div class="industrytable">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>绑定设备：是（{{userdetails.gizDevBinds | bindnum}}台）</td>
+                            <td>活跃度：N/A</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>分享次数：N/A</td>
+                            <td>最近登录时间：{{userdetails.updateAt | currentDate}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="details-info-left ">
+                <p>行业平台ID:<span>{{userdetails.uplatId}}</span></p>
+
+                <p>昵称：<span>{{userdetails.LoginName}}</span></p>
+
+                <p>性别：<span>N/A</span></p>
+
+                <p>注册来源：<span>行业App</span></p>
+
+                <p>注册时间：<span>{{userdetails.createAt | currentDate}}</span></p>
+
+            </div>
+            <div class="details-info-right">
+                <p>用户头像：<img class="img " src="images/userDetails/u6538.png"></p>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="escrowaccount">
+            <!--表格-->
+            <table id="personManage-table" class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>平台</th>
+                        <th>账号</th>
+                        <th>关联时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>海尔</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>美的</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>京东</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>康佳</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>海信</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>机智云</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                    <tr>
+                        <td>长虹</td>
+                        <td>1372323232</td>
+                        <td>2016-12-19 09:45</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>

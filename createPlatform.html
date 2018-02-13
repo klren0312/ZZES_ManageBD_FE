@@ -1,0 +1,104 @@
+<main id="createRole-page" class="createMember-page createPlatform-page" ng-controller="createPlatformController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">平台审核 &gt; 新建平台</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>新建平台</p>
+        <button type="button" id="goback" ng-click="goback()">返回</button>
+        <button type="button" id="save" ng-click="save()">保存</button>
+    </div>
+    <section id="create-member">
+        <table class="platformTable" cellpadding="20">
+            <tr>
+                <td>
+                    <span class="flag">*</span>厂商平台标识号：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="PlatID" required>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台类型：
+                </td>
+                <td>
+                    <select class="memberinput" ng-model="PlatType">
+                        <option value="00">智能家电行业公共服务平台</option>
+                        <option value="01">智能家电厂商服务平台</option>
+                        <option value="02">其它行业应用服务平台</option>
+                        <option value="03">其它行业支撑平台</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台域名：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="PlatURL" placeholder="http://" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台端口：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="PlatPort" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台名称：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="PlatName" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台联系人：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="Linkman" required>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>联系人电话：
+                </td>
+                <td>
+                    <input class="memberinput" type="number" ng-model="Phone" required>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>联系人邮箱：
+                </td>
+                <td>
+                    <input class="memberinput" type="email" ng-model="Email" required>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <span class="flag">*</span>平台描述：
+                </td>
+                <td>
+                    <input class="memberinput" type="text" ng-model="PlatDesc" required>
+                </td>
+            </tr>
+        </table>
+    </section>
+</main>

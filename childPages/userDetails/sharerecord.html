@@ -1,0 +1,55 @@
+<main class="sharerecord-page">
+    <header>
+        <span>累计分享计数： 3 条</span>
+        <button ng-click="exportToExcel('#personManage-table','mysheet')">导出数据</button>
+    </header>
+    <!--表格-->
+    <table id=" personManage-table " class="table table-bordered table-striped ">
+        <thead>
+            <tr>
+                <th>序号</th>
+                <th>分享类型</th>
+                <th>分享内容</th>
+                <th>分享对象</th>
+                <th>操作说明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>场景</td>
+                <td>卧室：睡眠场景，共两台设备</td>
+                <td>123131231313</td>
+                <td>2016-12-10 13:09</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>场景</td>
+                <td>卧室：睡眠场景，共两台设备</td>
+                <td>123131231313</td>
+                <td>2016-12-10 13:09</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>场景</td>
+                <td>卧室：睡眠场景，共两台设备</td>
+                <td>123131231313</td>
+                <td>2016-12-10 13:09</td>
+            </tr>
+        </tbody>
+    </table>
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+</main>

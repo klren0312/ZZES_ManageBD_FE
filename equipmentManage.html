@@ -1,0 +1,151 @@
+﻿<main id="personManage-main" ng-controller="equipmentManageController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">设备管理 &gt; 设备信息</span>
+    </div>
+    <div class="home-second-title personManage-second-title">
+        <p>设备信息</p>
+        <button type="button" class="output-btn" data-toggle="modal" data-target=".bs-example-modal-lg">导出</button>
+    </div>
+    <!--搜索行-->
+    <div class="personManage-search-div">
+        <input type="text" ng-model="keywords" placeholder="关键字">
+        <input type="text" ng-model="area" placeholder="选择地区">
+        <select ng-model="product">
+          <option value="">产品类型</option>
+          <option value="电视">电视</option>
+          <option value="空调">空调</option>
+          <option value="冰箱">冰箱</option>
+          <option value="洗衣机">洗衣机</option>
+          <option value="油烟机">油烟机</option>
+          <option value="电饭煲">电饭煲</option>
+          <option value="微波炉">微波炉</option>
+          <option value="烤箱">烤箱</option>
+          <option value="热水器">热水器</option>
+        </select>
+        <select ng-model="platform">
+          <option selected="" value="">接入平台</option>
+          <option value="Platform-H">Platform-H</option>
+          <option value="Platform-E">Platform-E</option>
+          <option value="Platform-F">Platform-F</option>
+          <option value="Platform-G">Platform-G</option>
+          <option value="其他第三方">其他第三方</option>
+        </select>
+        <select ng-model="status">
+          <option selected="" value="">运行状态</option>
+          <option value="待机">待机</option>
+          <option value="使用中">使用中</option>
+          <option value="关机">关机</option>
+          <option value="故障">故障</option>
+        </select>
+        <select ng-model="online">
+          <option selected="" value="">在线状态</option>
+          <option value="在线">在线</option>
+          <option value="离线">离线</option>
+          <option value="离网">离网</option>
+        </select>
+        <button ng-click="search()">搜索</button>
+        <button ng-click="reset()">重置</button>
+    </div>
+    <!--表格-->
+    <table id="personManage-table" class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th><input type="checkbox" ng-model="selectedAll" ng-click="selectAll()"></th>
+                <th>序号</th>
+                <th>UDeviceID</th>
+                <th>接入平台</th>
+                <th>产品类型</th>
+                <th>设备型号</th>
+                <th>连接方式</th>
+                <th>所在地区</th>
+                <th>运行状态</th>
+                <th>在线状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in items">
+                <th><input type="checkbox" ng-model="selected" ng-checked="selected" name="selected"></th>
+                <th>{{$index+1}}</th>
+                <th>{{x.udeviceId|nullToNA}}</th>
+                <th>{{x.fkPlatid |nullToNA}}</th>
+                <th>{{x.DeviceName |nullToNA}}</th>
+                <th>{{x.ModelID |nullToNA}}</th>
+                <th>{{x.NetMode | connectType}}</th>
+                <th>/</th>
+                <th>{{x.deviceStatus|nullToNA}}</th>
+                <th>{{x.deviceStatus | onlineStatus}}</th>
+                <th><button class="equipmentDetails" ng-click="watchDetails(x.udeviceId)">查看</button></th>
+            </tr>
+        </tbody>
+    </table>
+    <!--分页-->
+    <nav class="select-page">
+        <ul class="pagination">
+            <li>
+                <a class="thepageChange" ng-click="Previous()"><span>上一页</span></a>
+            </li>
+            <li ng-repeat="page in pageList" ng-class="{active: isActivePage(page)}">
+                <a class="thepageChange" ng-click="selectPage(page)">{{page}}</a>
+            </li>
+            <li>
+                <a class="thepageChange" ng-click="Next()"><span>下一页</span></a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--FIXME:导出弹框 无法有选择的导出-->
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="pop-title">导出数据</div>
+                <!--<div class="pop-second-title">当前选择数据 <span>10</span> 条</div>-->
+                <div class="pop-radio-line">
+                    <span>导出选择：</span>
+                    <label><input type="radio" name="page" ng-model="selectFun" value="allpage"/>全部页批量</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="currentpage"/>当前页</label>
+                    <label><input type="radio" name="page" ng-model="selectFun"  value="result" />筛选结果</label>
+                </div>
+
+                <hr/>
+                <!--可选择导出-->
+                <div ng-if="selectFun == 'result'">
+                    <div class="pop-checkbox-block">
+                        <span>选择指标：</span>
+                        <br>
+                        <label><input type="checkbox" name="select" ng-click="select('udeviceId',$event)" ng-model="udeviceId" >UDeviceID</label>
+                        <label><input type="checkbox" name="select" ng-click="select('fkPlatid',$event)" ng-model="fkPlatid">接入平台</label>
+                        <label><input type="checkbox" name="select" ng-click="select('DeviceName',$event)" ng-model="DeviceName">产品类型</label>
+                        <label><input type="checkbox" name="select" ng-click="select('ModelID',$event)" ng-model="ModelID">设备型号</label>
+                        <br>
+                        <label><input type="checkbox" name="select" ng-click="select('NetMode',$event)" ng-model="NetMode">连接方式</label>
+                        <!--<label><input type="checkbox" name="select" ng-click="select('place',$event)" ng-model="place">所在地区</label>-->
+                        <label><input type="checkbox" name="select" ng-click="select('deviceStatus',$event)" ng-model="deviceStatus">运行状态</label>
+                        <label><input type="checkbox" name="select" ng-click="select('deviceStatus',$event)" ng-model="deviceStatus">在线状态</label>
+                    </div>
+
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(result)">导出</button>
+                    </div>
+                </div>
+                <!--整体导出-->
+                <div ng-if="selectFun == 'allpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportExcel(allexport)">导出</button>
+                    </div>
+                </div>
+                <!--当前页导出-->
+                <div ng-if="selectFun == 'currentpage'">
+                    <hr/>
+                    <div class="pop-file-line">
+                        <button ng-click="exportToExcel('#personManage-table','mysheet')">导出</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

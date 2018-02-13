@@ -1,0 +1,131 @@
+﻿<main id="home-main" class="dataUseSurvey" ng-controller="dataUseSurveyController">
+    <div class="home-title">
+        <img id="u149_img" class="img " src="images/index/u149.png" />
+        <span class="home-text">数据分析 &gt; 使用概况</span>
+    </div>
+    <div class="home-second-title">
+        <p>使用概况</p>
+    </div>
+    <div class="mainContent row  col-sm-12">
+
+        <!--场景执行热度-->
+        <div class="col-sm-6 topdiv" id="sceneHot" ng-controller="sceneHotController">
+            <header>
+                <span class="headerTitle">场景执行热度</span>
+                <select ng-change="sceneChange(sceneHot.id)" ng-model="sceneHot" ng-options="x.timestamp for x in sceneHotInfo"> 
+                    <option value="">--最新--</option>
+                </select>
+            </header>
+            <div>
+                <div class="circle" id="t5"><span>No5</span>
+                    <br><span style="font-size:13px;">{{scene_heat_five}}</span></div>
+                <div class="circle" id="t4"><span>No4</span>
+                    <br><span style="font-size:16px;">{{scene_heat_four}}</span></div>
+                <div class="circle" id="t3"><span>No3</span>
+                    <br><span style="font-size:22px;">{{scene_heat_three}}</span></div>
+                <div class="circle" id="t2"><span>No2</span>
+                    <br><span style="font-size:24px;">{{scene_heat_two}}</span></div>
+                <div class="circle" id="t1"><span>No1</span>
+                    <br><span style="font-size:27px;">{{scene_heat_one}}</span></div>
+                <div class="circle" id="t6"><span>No6</span>
+                    <br><span style="font-size:12px;">{{scene_heat_six}}</span></div>
+                <div class="circle" id="t7"><span>No7</span>
+                    <br><span style="font-size:12px;">{{scene_heat_seven}}</span></div>
+                <div class="circle" id="t8"><span>No8</span>
+                    <br><span style="font-size:12px;">{{scene_heat_eight}}</span></div>
+                <div class="circle" id="t9"><span>No9</span>
+                    <br><span style="font-size:12px;">{{scene_heat_nine}}</span></div>
+                <div class="circle" id="t10"><span>No10</span>
+                    <br><span style="font-size:12px;">{{scene_heat_ten}}</span></div>
+            </div>
+        </div>
+        <!--用户绑定设备数占比-->
+        <div class="col-sm-6 topdiv" id="userbound" ng-controller="userBoundController">
+            <header>
+                <span class="headerTitle">用户绑定设备数占比</span>
+                <select ng-model="bindEqu" ng-change="userBoundChange(bindEqu.id)" ng-options="x.timestamp for x in userBoundArr">
+                    <option value="">--最新--</option>
+                </select>
+            </header>
+            <div>
+                <bound-devices ng-if="data" id="boundDevice" data="data"></bound-devices>
+                <p>{{dataAnalysis}}</p>
+            </div>
+        </div>
+
+        <!--各产品分类接入设备排行-->
+        <div class="col-sm-12 middlediv" id="product" ng-controller="productController">
+            <header>
+                <span class="headerTitle">各产品分类接入设备排行{{timeArr}}</span>
+                <select ng-model="product" ng-change="rankChange(product.timestamp)" ng-options="x.timestamp for x in rankArr">
+                    <option value="">--最新--</option>
+                </select>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>排名</th>
+                                <th>产品分类</th>
+                                <th>接入设备数</th>
+                                <!--<th>接入涨幅</th>
+                                <th>操作</th>-->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in realArr">
+                                <td>{{$index+1}}</td>
+                                <td>{{x.name}}</td>
+                                <td>{{x.num}}
+                                    <div class="progress">
+                                        <div ng-style="{width:x.num+'%'}" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="1000">
+                                        </div>
+                                    </div>
+                                </td>
+                                <!--<td>{{x.increase}}</td>
+                                <td><img id="u748_img" class="img " src="images/dataUseSurvey/u748.png"></td>-->
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </header>
+        </div>
+
+        <!--跨品牌设备绑定情况-->
+        <div class="col-sm-6 topdiv bottomdiv" id="brandbound" ng-controller="brandBoundController">
+            <header>
+                <span class="headerTitle">跨品牌设备绑定情况</span>
+                <select ng-model="sceneDate" ng-change="brandBoundChange(sceneDate.id)" ng-options="x.timestamp for x in brandBoundArr">
+                    <option value="">--最新--</option>
+                </select>
+            </header>
+            <div>
+                <bound-equipment ng-if="data" id="boundEquipment" data="data"></bound-equipment>
+            </div>
+        </div>
+        <!--扫码绑定与分享绑定占比-->
+        <div class="col-sm-6 topdiv bottomdiv" id="scanshare" ng-controller="scanShareController">
+            <header>
+                <span class="headerTitle">扫码绑定与分享绑定占比</span>
+                <select ng-model="scanShare" ng-change="scanShareChange(scanShare.id)" ng-options="x.timestamp for x in scanShareArr ">
+                    <option value="">--最新--</option>
+                </select>
+            </header>
+            <div class="col-sm-12" id="scanbound">
+                <div class="col-sm-6">
+                    <div ng-repeat="x in scannum">
+                        <img id="u790_img" class="img " src="images/dataUseSurvey/u790.png">
+                    </div>
+                    <span class="col-sm-12">扫码绑定</span>
+                </div>
+
+                <div class="col-sm-6" id="sharebound">
+                    <div ng-repeat="x in sharenum">
+                        <img id="u838_img" class="img" src="images/dataUseSurvey/u836.png">
+                    </div>
+                    <span class="col-sm-12">分享绑定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>

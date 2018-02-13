@@ -1,0 +1,287 @@
+#addSceneDiv {
+    padding: 20px;
+}
+
+#sceneName {
+    padding: 20px;
+    width: 100%;
+    height: 81px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#sceneNameSetting {
+    margin-top: -15px;
+}
+
+#sceneNameSetting .addSceneBtn {
+    margin-left: 336px;
+}
+
+#sceneName p {
+    font-weight: 700;
+    font-style: normal;
+    text-align: left;
+    font-size: 14px;
+    color: #333333;
+}
+
+#sceneName input {
+    margin-left: 20px;
+    width: 511px;
+    height: 35px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    text-decoration: none;
+    color: #000000;
+    text-align: left;
+}
+
+#sceneName #sceneSetting {
+    position: relative;
+}
+
+#addScene-page #sceneSetting-content {
+    padding: 40px 30px;
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#addScene-page #sceneSetting-title {
+    position: relative;
+    top: 50px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    font-size: 14px;
+    left: 20px;
+    background-color: #fff;
+    padding: 11px;
+}
+
+#addScene-page .sceneEdit,
+#addScene-page .sceneDel {
+    width: 64px;
+    height: 28px;
+    background: inherit;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+}
+
+#addScene-page .sceneDetails-table {
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0;
+}
+
+#sceneSetting-content tbody {
+    text-align: center;
+}
+
+#sceneSetting-content td {
+    vertical-align: middle;
+}
+
+#sceneSetting-content .scene-tb-head {
+    background-color: #F7F7F7;
+}
+
+#addScene-page #defaultSetting {
+    float: right;
+    margin-top: -52px;
+    margin-right: 450px;
+}
+
+#addScene-page .sceneEdit,
+#addScene-page .sceneDel:hover {
+    background-color: rgba(68, 182, 174, 1);
+    border-color: rgba(68, 182, 174, 1);
+    color: #FFFFFF;
+}
+
+#addScene-page .sceneEdit:hover {
+    background-color: rgba(60, 157, 150, 1);
+}
+
+#addScene-page .sceneDel {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(201, 201, 201, 1);
+    color: #666666;
+}
+
+#sceneJudge-table {
+    margin-bottom: 0;
+}
+
+#sceneSetting-content .addJudge {
+    width: 100%;
+    height: 29px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(232, 243, 253, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(211, 233, 252, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#sceneSetting-content .addJudge span {
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+.addSceneJudgePop section {
+    padding: 0 20px 30px 20px;
+}
+
+.addSceneJudgePop #selectEquipment,
+.addSceneJudgePop #settingValue {
+    width: 100%;
+    margin-top: 30px;
+    background: inherit;
+    background-color: inherit;
+    background-color: rgba(255, 255, 255, 1);
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(204, 204, 204, 1);
+    border-radius: 0px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.addSceneJudgePop #selectEquipment {
+    height: 75px;
+}
+
+.addSceneJudgePop #settingValue {
+    height: 117px;
+}
+
+.addSceneJudgePop .info {
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.addSceneJudgePop #selectEquipment,
+.addSceneJudgePop #settingValue {
+    position: relative;
+    padding: 20px;
+}
+
+.addSceneJudgePop #selectEquipment .info {
+    position: relative;
+    top: -35px;
+    left: -10px;
+}
+
+.addSceneJudgePop #settingValue .info {
+    position: relative;
+    top: -35px;
+    left: -10px;
+}
+
+.addSceneJudgePop #selectEquipment select {
+    width: 124px;
+    height: 28px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    text-decoration: none;
+    color: #999999;
+}
+
+.addSceneJudgePop #settingValue label {
+    margin-left: 20px;
+    font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+    color: #333333;
+    text-align: center;
+    line-height: normal;
+}
+
+#sceneAction {
+    margin-top: 20px;
+}
+
+#addScene-page .addSceneBtn:hover {
+    background-color: rgba(35, 133, 199, 1);
+}
+
+#addScene-page .addSceneBtn {
+    margin-top: 20px;
+    width: 117px;
+    height: 32px;
+    background: inherit;
+    background-color: inherit;
+    background-color: inherit;
+    background-color: rgba(53, 152, 220, 1);
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(53, 152, 220, 1);
+    border-radius: 20px;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-family: '微软雅黑 Regular', '微软雅黑';
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+}
+
+.addSceneGrouPop section {
+    padding: 28px;
+}
+
+.addSceneGrouPop .group-title {
+    width: 200px;
+}
