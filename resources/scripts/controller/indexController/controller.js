@@ -644,7 +644,7 @@ app.controller("dataEquAnalysisController", function($scope, $state, $log, $http
      */
     $scope.getCsv = function() {
         var time = eval($scope.time)
-        window.open('http://localhost:8083/console/analysis/csv/' + $scope.product + '/' + $scope.place + '/' + time[0] + ',' + time[1])
+        window.open('http://42.56.90.219:8083/console/analysis/csv/' + $scope.product + '/' + $scope.place + '/' + time[0] + ',' + time[1])
     }
 
     /**
@@ -862,7 +862,7 @@ app.controller("dataUserAnalysisController", function($scope, $state, $log, $htt
      */
     $scope.getCsv = function() {
         var time = eval($scope.time)
-        window.open('http://localhost:8083/console/analysis/csv/' + $scope.product + '/' + $scope.place + '/' + time[0] + ',' + time[1])
+        window.open('http://42.56.90.219:8083/console/analysis/csv/' + $scope.product + '/' + $scope.place + '/' + time[0] + ',' + time[1])
     }
 
     //时间组件
@@ -1403,7 +1403,7 @@ app.controller("runanalysisController", function($scope, $http, $state, $statePa
     }
 
     $scope.getCsv = function() {
-        window.open("http://localhost:8083/console/devices/csv")
+        window.open("http://42.56.90.219:8083/console/devices/csv")
     }
 
 
@@ -1949,9 +1949,9 @@ app.controller('percentage-usershare', function($scope, $log) {
 })
 app.controller("indexCtrl", function($scope, $http, $log, $state, Excel, $timeout, $cookies) {
 
-    //*url封装119.29.144.39
-    $scope.ROOTURL = "http://127.0.0.1:8083/console"
-    // $scope.ROOTURL = "http://119.29.144.39:8083/console"
+    //*url封装42.56.90.219
+    $scope.ROOTURL = "http://42.56.90.219:8083/console"
+    // $scope.ROOTURL = "http://42.56.90.219:8083/console"
    
 
     //*获取AccessToken
@@ -3534,7 +3534,7 @@ app.controller("aftersaleController", function($scope, $http, $log) {
 
 })
 app.controller('verificationCodeController',function($scope,$http,toastr,$state){
-  $scope.VERIFYURL = 'http://119.29.144.39:8083'
+  $scope.VERIFYURL = 'http://42.56.90.219:8083'
   /**
    * 获取验证码
    */
